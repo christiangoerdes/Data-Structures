@@ -1,1 +1,3 @@
 /.idea
+/build/CMakeCache.txt
+/build/CMakeFiles/
