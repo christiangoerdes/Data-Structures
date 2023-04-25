@@ -1,24 +1,24 @@
 #include "../../include/singlyLinkedList/listNode.hpp"
 
-template<class T>
+template <typename T>
 ListNode<T>::ListNode(T data) : data(data), next(nullptr) {}
 
-template<class T>
-std::shared_ptr<ListNode<T>> ListNode<T>::get_next() {
+template <typename T>
+std::shared_ptr<ListNode<T>> ListNode<T>::get_next() const{
     return next;
 }
 
-template<class T>
-T ListNode<T>::get_data() {
+template <typename T>
+const T& ListNode<T>::get_data() const{
     return data;
 }
 
-template<class T>
+template <typename T>
 void ListNode<T>::set_next(std::shared_ptr<ListNode<T>> nextNode) {
     next = nextNode;
 }
 
-template<class T>
-void ListNode<T>::set_data(T newData) {
+template <typename T>
+void ListNode<T>::set_data(const T& newData) {
     data = newData;
 }

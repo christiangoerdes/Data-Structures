@@ -3,7 +3,7 @@
 
 #include <memory>
 
-template<class T>
+template <typename T>
 
 /**
  * @brief Node class for a singly linked list
@@ -23,13 +23,13 @@ public:
      * @brief Returns a shared_ptr to the next node in the list
      * @return Shared_ptr to the next node
      */
-    std::shared_ptr<ListNode<T>> get_next();
+    std::shared_ptr<ListNode<T>> get_next() const;
 
     /**
      * @brief Returns the data stored in the node
      * @return Data stored in the node
      */
-    T get_data();
+    const T& get_data() const;
 
     /**
      * @brief Sets the next node in the list
@@ -41,7 +41,7 @@ public:
      * @brief Sets the data stored in the node
      * @param newData Data to be stored in the node
      */
-    void set_data(T newData);
+    void set_data(const T& newData);
 
 private:
     T data; /**< Data stored in the node */
