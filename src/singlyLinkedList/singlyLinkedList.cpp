@@ -1,62 +1,56 @@
-#include "../../include/singlyLinkedList/singlyLinkedList.ipp"
+#include "../../include/singlyLinkedList/singlyLinkedList.hpp"
 
 template <typename T>
-size_t SinglyLinkedList<T>::get_size() const {
-    return size;
-}
-
-template <typename T>
-std::shared_ptr<ListNode<T>> SinglyLinkedList<T>::get_head() const {
-    return head;
-}
-
-template <typename T>
-void SinglyLinkedList<T>::set_head(std::shared_ptr<ListNode<T>> newHead) {
-    head = newHead;
-}
-
-template <typename T>
-void SinglyLinkedList<T>::get_front() const{
-    //TODO
-}
-
-template <typename T>
-void SinglyLinkedList<T>::insert_front(const T& t) {
-    auto newNode = std::make_shared<ListNode<T>>(t);
-    newNode->set_next(head);
-    set_head(newNode);
-    size++;
-}
-
-template <typename T>
-void SinglyLinkedList<T>::insert_after(const std::shared_ptr<ListNode<T>>& predecessor, const T& t) {
-    if (!predecessor) {
-        throw std::invalid_argument("predecessor is null");
+class SinglyLinkedList : public AbstractSinglyLinkedList<T> {
+public:
+    size_t get_size() const override {
+        return size;
     }
-    auto newNode = std::make_shared<ListNode<T>>(t);
-    newNode->set_next(predecessor->get_next());
-    predecessor->set_next(newNode);
-    size++;
-}
 
-template <typename T>
-void SinglyLinkedList<T>::remove_front() {
-    if (!head) {
-        throw std::runtime_error("list is empty");
-    }
-    set_head(head->get_next());
-    size--;
-}
 
-template <typename T>
-void SinglyLinkedList<T>::remove_after(const std::shared_ptr<ListNode<T>>& predecessor) {
-    if (!predecessor) {
-        throw std::invalid_argument("predecessor is null");
+    void get_front() const override {
+        //TODO
     }
-    auto nodeToRemove = predecessor->get_next();
-    if (!nodeToRemove) {
-        throw std::invalid_argument("predecessor has no next node");
+
+
+    void insert_front(const T &t) override {
+        auto newNode = std::make_shared<ListNode<T>>(t);
+        newNode->set_next(head);
+        head = newNode;
+        size++;
     }
-    predecessor->set_next(nodeToRemove->get_next());
-    size--;
-}
+
+    void insert_after(const std::shared_ptr<ListNode<T>> &predecessor, const T &t) override {
+        if (!predecessor) {
+            throw std::invalid_argument("predecessor is null");
+        }
+        auto newNode = std::make_shared<ListNode<T>>(t);
+        newNode->set_next(predecessor->get_next());
+        predecessor->set_next(newNode);
+        size++;
+    }
+
+    void remove_front() override {
+        if (!head) {
+            throw std::runtime_error("list is empty");
+        }
+        head = head->get_next();
+        size--;
+    }
+
+    void remove_after(const std::shared_ptr<ListNode<T>> &predecessor) override {
+        if (!predecessor) {
+            throw std::invalid_argument("predecessor is null");
+        }
+        auto nodeToRemove = predecessor->get_next();
+        if (!nodeToRemove) {
+            throw std::invalid_argument("predecessor has no next node");
+        }
+        predecessor->set_next(nodeToRemove->get_next());
+        size--;
+    }
+
+private:
+    std::shared_ptr<ListNode<T>> head; /**< Pointer to the first node in the list */
+    size_t size; /**< Number of nodes in the list */
+};

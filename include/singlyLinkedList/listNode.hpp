@@ -1,4 +1,3 @@
-#pragma once
 #ifndef PROJEKTALPHA_LISTNODE_HPP
 #define PROJEKTALPHA_LISTNODE_HPP
 
