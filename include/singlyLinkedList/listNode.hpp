@@ -1,3 +1,4 @@
+#pragma once
 #ifndef PROJEKTALPHA_LISTNODE_HPP
 #define PROJEKTALPHA_LISTNODE_HPP
 
@@ -47,5 +48,7 @@ private:
     T data; /**< Data stored in the node */
     std::shared_ptr<ListNode<T>> next; /**< Shared_ptr to the next node in the list */
 };
+
+
 
 #endif //PROJEKTALPHA_LISTNODE_HPP

@@ -1,4 +1,4 @@
-#include "../../include/singlyLinkedList/singlyLinkedList.hpp"
+#include "../../include/singlyLinkedList/singlyLinkedList.ipp"
 
 template <typename T>
 size_t SinglyLinkedList<T>::get_size() const {
