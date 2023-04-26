@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 template <typename T>
 class DoublyLinkedList : public AbstractDoublyLinkedList<T> {
 public:
@@ -60,6 +62,19 @@ public:
         }
         size--;
     }
+
+    void print() const {
+        std::shared_ptr<ListNode<T>> curr = head;
+        while(curr != nullptr) {
+            std::cout << curr -> get_data() << ", ";
+            curr = curr -> get_next();
+        }
+    }
+
+    std::shared_ptr<ListNode<T>> get_head() const {
+        return head;
+    }
+
 
 private:
     size_t size; /**< Number of nodes in the list */
