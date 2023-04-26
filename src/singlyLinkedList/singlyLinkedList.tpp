@@ -6,6 +6,8 @@ template <typename T>
 class SinglyLinkedList : public AbstractSinglyLinkedList<T> {
 public:
 
+    SinglyLinkedList() : size(0), head(nullptr) {}
+
     size_t get_size() const override {
         return size;
     }
