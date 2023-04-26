@@ -12,12 +12,12 @@ public:
         return size;
     }
 
-    void get_front() const override { //TODO add the Iterator
-
+    ListIterator<T> get_front() const override {
+        return ListIterator<T>(head);
     }
 
-    void get_tail() const override { //TODO add the Iterator
-
+    ListIterator<T> get_tail() const override {
+        return ListIterator<T>(head);
     }
 
     void insert_front(const T& t) override {

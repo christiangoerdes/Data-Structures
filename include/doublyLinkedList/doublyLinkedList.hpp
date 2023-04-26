@@ -6,6 +6,7 @@
 #pragma once
 
 #include "listNode.hpp"
+#include "listIterator.hpp"
 #include <iterator>
 
 /**
@@ -27,13 +28,13 @@ public:
      * @brief Returns an iterator to the first element in the list
      * @return An iterator to the first element in the list
      */
-    virtual void get_front() const = 0; //TODO add the Iterator
+    virtual ListIterator<T> get_front() const = 0;
 
     /**
      * @brief Returns an iterator to the last element in the list
      * @return An iterator to the last element in the list
      */
-    virtual void get_tail() const = 0; //TODO add the Iterator
+    virtual ListIterator<T> get_tail() const = 0;
 
     /**
      * @brief Inserts a new node with the given data at the beginning of the list
