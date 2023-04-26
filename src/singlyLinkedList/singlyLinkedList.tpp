@@ -1,8 +1,11 @@
-#include "../../include/singlyLinkedList/singlyLinkedList.hpp"
+#pragma once
+
+#include <iostream>
 
 template <typename T>
 class SinglyLinkedList : public AbstractSinglyLinkedList<T> {
 public:
+
     size_t get_size() const override {
         return size;
     }
@@ -48,6 +51,18 @@ public:
         }
         predecessor->set_next(nodeToRemove->get_next());
         size--;
+    }
+
+    void print() const {
+        std::shared_ptr<ListNode<T>> curr = head;
+        while(curr != nullptr) {
+            std::cout << curr -> get_data() << ", ";
+            curr = curr -> get_next();
+        }
+    }
+
+    std::shared_ptr<ListNode<T>> get_head() const {
+        return head;
     }
 
 private:

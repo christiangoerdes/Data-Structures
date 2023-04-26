@@ -1,10 +1,8 @@
+#pragma once
 /**
  * @file singlyLinkedList.hpp
  * @brief Header file for a singly linked list implementation
  */
-
-#ifndef PROJEKTALPHA_SINGLYLINKEDLIST_HPP
-#define PROJEKTALPHA_SINGLYLINKEDLIST_HPP
 
 #include "listNode.hpp"
 #include <iterator>
@@ -55,5 +53,3 @@ public:
 };
 
 #include "../../src/singlyLinkedList/singlyLinkedList.tpp"
-
-#endif //PROJEKTALPHA_SINGLYLINKEDLIST_HPP
