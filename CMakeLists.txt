@@ -87,5 +87,3 @@ gtest_discover_tests(demo_2_test)
 add_executable(demo_3_test tests/demo_3_test.cpp ${SRC_FILES})
 target_link_libraries(demo_3_test GTest::gtest_main)
 gtest_discover_tests(demo_3_test)
-
-
