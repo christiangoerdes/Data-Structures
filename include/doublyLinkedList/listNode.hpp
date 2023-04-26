@@ -1,0 +1,8 @@
+//
+// Created by Chrisi on 26.04.2023.
+//
+
+#ifndef PROJEKTALPHA_LISTNODE_HPP
+#define PROJEKTALPHA_LISTNODE_HPP
+
+#endif //PROJEKTALPHA_LISTNODE_HPP
