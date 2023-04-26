@@ -54,6 +54,6 @@ public:
     virtual void remove_after(const std::shared_ptr<ListNode<T>>& predecessor) = 0;
 };
 
-#include "../src/singlyLinkedList/singlyLinkedList.cpp"
+#include "../../src/singlyLinkedList/singlyLinkedList.cpp"
 
 #endif //PROJEKTALPHA_SINGLYLINKEDLIST_HPP
