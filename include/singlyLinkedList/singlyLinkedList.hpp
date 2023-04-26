@@ -27,7 +27,7 @@ public:
      * @brief Get an iterator pointing to the first node in the list
      * @return Iterator to the first node
      */
-    virtual std::shared_ptr<ListNode<T>> get_front() = 0;
+    virtual std::shared_ptr<ListNode<T>> get_front() = 0; //TODO add the Iterator
 
     /**
      * @brief Insert a new node containing data at the front of the list
@@ -58,7 +58,7 @@ public:
  * @brief Implementation of a singly linked list
  * @tparam T Type of data stored in the list
  */
-template<class T>
+template <typename T>
 class SinglyLinkedList : public AbstractSinglyLinkedList<T> {
 
 public:
@@ -103,13 +103,12 @@ private:
     size_t size; /**< Number of nodes in the list */
 
     /**
-
     @brief Returns the head of the linked list.
     @return The head of the linked list as a shared pointer to a ListNode<T> object.
     */
         std::shared_ptr<ListNode<T>> get_head() const;
-    /**
 
+    /**
     @brief Sets the head of the linked list to a new node.
     @param newHead The new head of the linked list as a shared pointer to a ListNode<T> object.
     */
