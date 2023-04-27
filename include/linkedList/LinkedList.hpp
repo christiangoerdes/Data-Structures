@@ -4,8 +4,7 @@
  * @brief Header file for a singly linked list implementation
  */
 
-#include "doublyLinkedList/listNode.hpp"
-#include "doublyLinkedList/listIterator.hpp"
+#include "listNode.hpp"
 
 /**
  * @brief Abstract interface for a singly linked list
@@ -25,7 +24,7 @@ public:
      * @brief Get an iterator pointing to the first node in the list
      * @return Iterator to the first node
      */
-    virtual ListIterator<T> get_front() const = 0; //TODO add the Iterator
+    virtual ListNode<T> get_front() const = 0; //TODO add the Iterator
 
     /**
      * @brief Insert a new node containing data at the front of the list
