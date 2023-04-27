@@ -5,40 +5,22 @@
  */
 
 #include "listNode.hpp"
-#include <iterator>
+#include "../LinkedList.hpp"
 
 /**
  * @brief Abstract interface for a singly linked list
  * @tparam T Type of data stored in the list
  */
 template <typename T>
-class AbstractSinglyLinkedList {
+class AbstractSinglyLinkedList : public AbstractLinkedList<T>{
 
 public:
-    /**
-     * @brief Get the size of the list
-     * @return The number of nodes in the list
-     */
-    virtual size_t get_size() const = 0;
 
     /**
      * @brief Get an iterator pointing to the first node in the list
      * @return Iterator to the first node
      */
-    virtual void get_front() const = 0 ; //TODO add the Iterator
-
-    /**
-     * @brief Insert a new node containing data at the front of the list
-     * @param t Data to be stored in the new node
-     */
-    virtual void insert_front(const T& t) = 0;
-
-    /**
-     * @brief Insert a new node containing data after the given predecessor node
-     * @param predecessor Node after which the new node should be inserted
-     * @param t Data to be stored in the new node
-     */
-    virtual void insert_after(const std::shared_ptr<ListNode<T>>& predecessor, const T& t) = 0;
+    virtual ListIterator<T> get_front() const = 0 ; //TODO add the Iterator
 
     /**
      * @brief Remove the node at the front of the list

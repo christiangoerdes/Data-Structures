@@ -13,8 +13,8 @@ public:
     }
 
 
-    void get_front() const override {
-        //TODO
+    ListIterator<T> get_front() const override {
+        return ListIterator<T>(head);
     }
 
 
