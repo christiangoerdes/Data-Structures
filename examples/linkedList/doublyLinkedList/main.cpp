@@ -1,4 +1,5 @@
-#include "../../../include/doublyLinkedList/doublyLinkedList.hpp"
+#include "../../../include/linkedList/doublyLinkedList/doublyLinkedList.hpp"
+
 
 int main() {
 

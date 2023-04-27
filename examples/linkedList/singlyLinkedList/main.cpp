@@ -1,4 +1,4 @@
-#include "../../../include/singlyLinkedList/singlyLinkedList.hpp"
+#include "../../../include/linkedList/singlyLinkedList/singlyLinkedList.hpp"
 
 #include <iostream>
 

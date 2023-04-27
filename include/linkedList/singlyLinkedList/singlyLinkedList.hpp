@@ -52,4 +52,4 @@ public:
     virtual void remove_after(const std::shared_ptr<ListNode<T>>& predecessor) = 0;
 };
 
-#include "../../src/singlyLinkedList/singlyLinkedList.tpp"
+#include "../../../src/linkedList/singlyLinkedList/singlyLinkedList.tpp"

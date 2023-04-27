@@ -56,4 +56,4 @@ public:
     virtual void remove(const std::shared_ptr<ListNode<T>>& node) = 0;
 };
 
-#include "../../src/doublyLinkedList/doublyLinkedList.tpp"
+#include "../../../src/linkedList/doublyLinkedList/doublyLinkedList.tpp"
