@@ -13,23 +13,23 @@ public:
     }
 
 
-    ListIterator<T> get_front() const override {
-        return ListIterator<T>(head);
+    DoublyLinkedListIterator<T> get_front() const override {
+        return DoublyLinkedListIterator<T>(head);
     }
 
 
     void insert_front(const T &t) override {
-        auto newNode = std::make_shared<ListNode<T>>(t);
+        auto newNode = std::make_shared<SinglyLinkedListNode<T>>(t);
         newNode->set_next(head);
         head = newNode;
         size++;
     }
 
-    void insert_after(const std::shared_ptr<ListNode<T>> &predecessor, const T &t) override {
+    void insert_after(const std::shared_ptr<SinglyLinkedListNode<T>> &predecessor, const T &t) override {
         if (!predecessor) {
             throw std::invalid_argument("predecessor is null");
         }
-        auto newNode = std::make_shared<ListNode<T>>(t);
+        auto newNode = std::make_shared<SinglyLinkedListNode<T>>(t);
         newNode->set_next(predecessor->get_next());
         predecessor->set_next(newNode);
         size++;
@@ -43,7 +43,7 @@ public:
         size--;
     }
 
-    void remove_after(const std::shared_ptr<ListNode<T>> &predecessor) override {
+    void remove_after(const std::shared_ptr<SinglyLinkedListNode<T>> &predecessor) override {
         if (!predecessor) {
             throw std::invalid_argument("predecessor is null");
         }
@@ -56,18 +56,18 @@ public:
     }
 
     void print() const {
-        std::shared_ptr<ListNode<T>> curr = head;
+        std::shared_ptr<SinglyLinkedListNode<T>> curr = head;
         while(curr != nullptr) {
             std::cout << curr -> get_data() << ", ";
             curr = curr -> get_next();
         }
     }
 
-    std::shared_ptr<ListNode<T>> get_head() const {
+    std::shared_ptr<SinglyLinkedListNode<T>> get_head() const {
         return head;
     }
 
 private:
-    std::shared_ptr<ListNode<T>> head; /**< Pointer to the first node in the list */
+    std::shared_ptr<SinglyLinkedListNode<T>> head; /**< Pointer to the first node in the list */
     size_t size; /**< Number of nodes in the list */
 };
