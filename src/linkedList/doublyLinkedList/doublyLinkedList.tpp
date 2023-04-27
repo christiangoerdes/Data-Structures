@@ -12,6 +12,7 @@ public:
         return size;
     }
 
+
     ListIterator<T> get_front() const override {
         return ListIterator<T>(head);
     }
@@ -19,6 +20,7 @@ public:
     ListIterator<T> get_tail() const override {
         return ListIterator<T>(head);
     }
+
 
     void insert_front(const T& t) override {
         auto newNode = std::make_shared<ListNode<T>>(t);
