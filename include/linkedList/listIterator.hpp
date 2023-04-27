@@ -1,6 +1,7 @@
 #pragma once // Header guard to avoid multiple inclusion
 
 #include "listNode.hpp" // Include the ListNode header file
+#include "listIterator.hpp"
 
 template <typename T> // Template declaration for a generic type T
 class ListIterator {
@@ -31,11 +32,6 @@ public:
         return temp;
     }
 
-    // Prefix decrement operator overload that moves the iterator to the previous node and returns a reference to the updated iterator
-    ListIterator& operator--() {
-        current = current->get_prev();
-        return *this;
-    }
 
     // Postfix decrement operator overload that creates a copy of the current iterator, moves the current iterator to the previous node and returns the original copy
     ListIterator operator--(int) {
