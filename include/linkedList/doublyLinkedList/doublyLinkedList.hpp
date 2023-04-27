@@ -5,8 +5,8 @@
 
 #pragma once
 
-#include "listNode.hpp"
-#include "listIterator.hpp"
+#include "doublyLinkedListNode.hpp"
+#include "doublyLinkedListIterator.hpp"
 #include "../linkedList.hpp"
 
 /**
@@ -22,13 +22,13 @@ public:
      * @brief Returns an iterator to the last element in the list
      * @return An iterator to the last element in the list
      */
-    virtual ListIterator<T> get_tail() const = 0;
+    virtual DoublyLinkedListIterator<T> get_tail() const = 0;
 
     /**
      * @brief Removes the specified node from the list
      * @param node A shared pointer to the node to be removed
      */
-    virtual void remove(const std::shared_ptr<ListNode<T>>& node) = 0;
+    virtual void remove(const std::shared_ptr<SinglyLinkedListNode<T>>& node) = 0;
 };
 
 #include "../../../src/linkedList/doublyLinkedList/doublyLinkedList.tpp"
