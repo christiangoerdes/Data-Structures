@@ -15,6 +15,11 @@ public:
         return *this;
     }
 
+    // Member access operator overload that returns a shared pointer to the current node
+    std::shared_ptr<DoublyLinkedListNode<T>> operator->() const {
+        return current;
+    }
+
 private:
     std::shared_ptr<DoublyLinkedListNode<T>> current; // Shared pointer to the current nod
 };
