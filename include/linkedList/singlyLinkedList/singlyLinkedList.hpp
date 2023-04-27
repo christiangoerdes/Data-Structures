@@ -5,6 +5,7 @@
  */
 
 #include "singlyLinkedListNode.hpp"
+#include "singlyLinkedListIterator.hpp"
 #include "../LinkedList.hpp"
 
 /**
@@ -20,7 +21,7 @@ public:
      * @brief Get an iterator pointing to the first node in the list
      * @return Iterator to the first node
      */
-    virtual DoublyLinkedListIterator<T> get_front() const = 0 ;
+    virtual SinglyLinkedListIterator<T> get_front() const = 0 ;
 
     /**
      * @brief Remove the node at the front of the list

@@ -28,7 +28,7 @@ public:
      * @brief Removes the specified node from the list
      * @param node A shared pointer to the node to be removed
      */
-    virtual void remove(const std::shared_ptr<SinglyLinkedListNode<T>>& node) = 0;
+    virtual void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) = 0;
 };
 
 #include "../../../src/linkedList/doublyLinkedList/doublyLinkedList.tpp"
