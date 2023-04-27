@@ -13,17 +13,17 @@ public:
     }
 
 
-    ListIterator<T> get_front() const override {
-        return ListIterator<T>(head);
+    DoublyLinkedListIterator<T> get_front() const override {
+        return DoublyLinkedListIterator<T>(head);
     }
 
-    ListIterator<T> get_tail() const override {
-        return ListIterator<T>(head);
+    DoublyLinkedListIterator<T> get_tail() const override {
+        return DoublyLinkedListIterator<T>(head);
     }
 
 
     void insert_front(const T& t) override {
-        auto newNode = std::make_shared<ListNode<T>>(t);
+        auto newNode = std::make_shared<DoublyLinkedListNode<T>>(t);
         if (size == 0) {
             head = newNode;
             tail = newNode;
@@ -35,8 +35,8 @@ public:
         size++;
     }
 
-    void insert_after(const std::shared_ptr<ListNode<T>>& predecessor, const T& t) override {
-        auto newNode = std::make_shared<ListNode<T>>(t);
+    void insert_after(const std::shared_ptr<DoublyLinkedListNode<T>>& predecessor, const T& t) override {
+        auto newNode = std::make_shared<DoublyLinkedListNode<T>>(t);
         auto successor = predecessor->get_next();
         predecessor->set_next(newNode);
         newNode->set_prev(predecessor);
@@ -49,7 +49,7 @@ public:
         size++;
     }
 
-    void remove(const std::shared_ptr<ListNode<T>>& node) override {
+    void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) override {
         auto predecessor = node->get_prev();
         auto successor = node->get_next();
         if (predecessor) {
@@ -66,20 +66,20 @@ public:
     }
 
     void print() const {
-        std::shared_ptr<ListNode<T>> curr = head;
+        std::shared_ptr<DoublyLinkedListNode<T>> curr = head;
         while(curr != nullptr) {
             std::cout << curr -> get_data() << ", ";
             curr = curr -> get_next();
         }
     }
 
-    std::shared_ptr<ListNode<T>> get_head() const {
+    std::shared_ptr<DoublyLinkedListNode<T>> get_head() const {
         return head;
     }
 
 
 private:
     size_t size; /**< Number of nodes in the list */
-    std::shared_ptr<ListNode<T>> head; /**< Pointer to the first node in the list */
-    std::shared_ptr<ListNode<T>> tail; /**< Pointer to the last node in the list */
+    std::shared_ptr<DoublyLinkedListNode<T>> head; /**< Pointer to the first node in the list */
+    std::shared_ptr<DoublyLinkedListNode<T>> tail; /**< Pointer to the last node in the list */
 };
