@@ -24,6 +24,14 @@ public:
     }
 
     /**
+     * @brief Returns a shared_ptr to the next node in the list
+     * @return Shared_ptr to the next node
+     */
+    std::shared_ptr<DoublyLinkedListNode<T>> get_next() const {
+        return next;
+    }
+
+    /**
      * @brief Sets the previous node in the list
      * @param prevNode A shared pointer to the previous node in the list
      */
@@ -33,5 +41,6 @@ public:
 
 
 private:
+    std::shared_ptr<DoublyLinkedListNode<T>> next; /**< Shared_ptr to the next node in the list */
     std::shared_ptr<DoublyLinkedListNode<T>> predecessor; /**< A shared pointer to the previous node in the list */
 };
