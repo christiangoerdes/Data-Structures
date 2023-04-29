@@ -1,25 +1,45 @@
-#pragma once // Header guard to avoid multiple inclusion
+#pragma once
 
-#include "doublyLinkedListNode.hpp" // Include the SinglyLinkedListNode header file
-#include "../listIterator.hpp"
+#include "../ListIterator.hpp"
 
-template <typename T> // Template declaration for a generic type T
+template <typename T>
 class DoublyLinkedListIterator : public ListIterator<T>{
 public:
-
     DoublyLinkedListIterator(std::shared_ptr<DoublyLinkedListNode<T>> node) : current(node) {}
 
-    // Prefix decrement operator overload that moves the iterator to the previous node and returns a reference to the updated iterator
-    DoublyLinkedListIterator& operator--() {
-        current = current->get_prev();
-        return *this;
+    virtual T& operator*() const {
+        return current->get_data();
     }
 
-    // Member access operator overload that returns a shared pointer to the current node
-    std::shared_ptr<DoublyLinkedListNode<T>> operator->() const {
+    virtual std::shared_ptr<ListNode<T>> operator->() const {
         return current;
     }
 
+    virtual DoublyLinkedListIterator& operator++() {
+        current = current->get_next();
+        return *this;
+    }
+ 
+    virtual DoublyLinkedListIterator operator++(int) {
+        DoublyLinkedListIterator temp(current);
+        ++(*this);
+        return temp;
+    }
+
+    virtual DoublyLinkedListIterator operator--(int) {
+        DoublyLinkedListIterator temp(current);
+        --(*this);
+        return temp;
+    }
+
+    virtual bool operator==(const DoublyLinkedListIterator& other) const {
+        return current == other.current;
+    }
+
+    virtual bool operator!=(const DoublyLinkedListIterator& other) const {
+        return *this != other;
+    }
+
 private:
-    std::shared_ptr<DoublyLinkedListNode<T>> current; // Shared pointer to the current nod
+    std::shared_ptr<DoublyLinkedListNode<T>> current;
 };
