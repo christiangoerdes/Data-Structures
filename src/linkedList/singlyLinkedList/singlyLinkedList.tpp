@@ -13,8 +13,8 @@ public:
     }
 
 
-    DoublyLinkedListIterator<T> get_front() const override {
-        return DoublyLinkedListIterator<T>(head);
+    SinglyLinkedListIterator<T> get_front() const override {
+        return SinglyLinkedListIterator<T>(head);
     }
 
 

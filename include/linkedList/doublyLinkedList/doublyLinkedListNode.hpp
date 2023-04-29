@@ -14,6 +14,14 @@ public:
         prev = nullptr;
     }
 
+    virtual const T& get_data() const {
+        return data;
+    }
+
+    virtual void set_data(const T& newData) {
+        data = newData;
+    }
+
     std::shared_ptr<DoublyLinkedListNode<T>> get_next() const {
         return next;
     }

@@ -13,6 +13,14 @@ public:
         next = nullptr;
     }
 
+    const T& get_data() const {
+        return data;
+    }
+
+    void set_data(const T& newData) {
+        data = newData;
+    }
+
     std::shared_ptr<SinglyLinkedListNode<T>> get_next() const {
         return next;
     }
