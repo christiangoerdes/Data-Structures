@@ -27,7 +27,7 @@ public:
 
     void insert_after(const std::shared_ptr<SinglyLinkedListNode<T>> &predecessor, const T &t) override {
         if (!predecessor) {
-            throw std::invalid_argument("predecessor is null");
+            throw std::invalid_argument("prev is null");
         }
         auto newNode = std::make_shared<SinglyLinkedListNode<T>>(t);
         newNode->set_next(predecessor->get_next());
@@ -45,11 +45,11 @@ public:
 
     void remove_after(const std::shared_ptr<SinglyLinkedListNode<T>> &predecessor) override {
         if (!predecessor) {
-            throw std::invalid_argument("predecessor is null");
+            throw std::invalid_argument("prev is null");
         }
         auto nodeToRemove = predecessor->get_next();
         if (!nodeToRemove) {
-            throw std::invalid_argument("predecessor has no next node");
+            throw std::invalid_argument("prev has no next node");
         }
         predecessor->set_next(nodeToRemove->get_next());
         size--;

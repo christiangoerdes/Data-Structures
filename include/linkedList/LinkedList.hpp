@@ -34,7 +34,7 @@ public:
     virtual void insert_front(const T& t) = 0;
 
     /**
-     * @brief Insert a new node containing data after the given predecessor node
+     * @brief Insert a new node containing data after the given prev node
      * @param predecessor Node after which the new node should be inserted
      * @param t Data to be stored in the new node
      */
