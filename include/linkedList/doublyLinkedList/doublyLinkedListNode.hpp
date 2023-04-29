@@ -17,6 +17,8 @@ template <typename T>
 class DoublyLinkedListNode : public ListNode<T> {
 
 public:
+
+    using ListNode<T>::data;
     /**
      * @brief Construct a new Doubly Linked List Node object with the given data
      *

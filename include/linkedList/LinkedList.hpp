@@ -1,15 +1,19 @@
-#pragma once
 /**
- * @file singlyLinkedList.hpp
- * @brief Header file for a singly linked list implementation
+ * @file abstractLinkedList.hpp
+ * @brief A class representing the abstract base class for linked list data structures
  */
+
+#pragma once
 
 #include "listNode.hpp"
 #include "listIterator.hpp"
 
 /**
- * @brief Abstract interface for a singly linked list
- * @tparam T Type of data stored in the list
+ * @brief A class representing the abstract base class for linked list data structures
+ *
+ * This class defines the interface that must be implemented by any derived linked list classes.
+ *
+ * @tparam T The type of the elements stored in the linked list
  */
 template <typename T>
 class AbstractLinkedList {
@@ -17,15 +21,16 @@ class AbstractLinkedList {
 public:
 
     /**
-     * @brief Get the size of the list
-     * @return The number of nodes in the list
+     * @brief Returns the number of elements in the linked list
+     *
+     * @return The number of elements in the linked list
      */
     virtual size_t get_size() const = 0;
 
     /**
-     * @brief Insert a new node containing data at the front of the list
-     * @param t Data to be stored in the new node
+     * @brief Inserts a new element at the front of the linked list
+     *
+     * @param t The new element to insert
      */
     virtual void insert_front(const T& t) = 0;
-
 };
