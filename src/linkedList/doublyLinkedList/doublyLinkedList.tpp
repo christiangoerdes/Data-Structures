@@ -5,23 +5,24 @@
 template <typename T>
 class DoublyLinkedList : public AbstractDoublyLinkedList<T> {
 public:
-
     DoublyLinkedList() : size(0), head(nullptr), tail(nullptr) {}
 
+    // returns the size of the list
     size_t get_size() const override {
         return size;
     }
 
-
+    // returns an iterator to the first element in the list
     DoublyLinkedListIterator<T> get_front() const override {
         return DoublyLinkedListIterator<T>(head);
     }
 
+    // returns an iterator to the last element in the list
     DoublyLinkedListIterator<T> get_tail() const override {
         return DoublyLinkedListIterator<T>(head);
     }
 
-
+    // inserts a new element at the front of the list
     void insert_front(const T& t) override {
         auto newNode = std::make_shared<DoublyLinkedListNode<T>>(t);
         if (size == 0) {
@@ -35,6 +36,7 @@ public:
         size++;
     }
 
+    // inserts a new element after a specified node
     void insert_after(const std::shared_ptr<DoublyLinkedListNode<T>>& predecessor, const T& t) override {
         auto newNode = std::make_shared<DoublyLinkedListNode<T>>(t);
         auto successor = predecessor->get_next();
@@ -49,6 +51,7 @@ public:
         size++;
     }
 
+    // removes a specified node from the list
     void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) override {
         auto predecessor = node->get_prev();
         auto successor = node->get_next();
@@ -65,6 +68,7 @@ public:
         size--;
     }
 
+    // prints the contents of the list to the console
     void print() const {
         std::shared_ptr<DoublyLinkedListNode<T>> curr = head;
         while(curr != nullptr) {
@@ -73,13 +77,13 @@ public:
         }
     }
 
+    // returns a shared pointer to the head of the list
     std::shared_ptr<DoublyLinkedListNode<T>> get_head() const {
         return head;
     }
 
-
 private:
-    size_t size; /**< Number of nodes in the list */
-    std::shared_ptr<DoublyLinkedListNode<T>> head; /**< Pointer to the first node in the list */
-    std::shared_ptr<DoublyLinkedListNode<T>> tail; /**< Pointer to the last node in the list */
+    size_t size;
+    std::shared_ptr<DoublyLinkedListNode<T>> head;
+    std::shared_ptr<DoublyLinkedListNode<T>> tail;
 };
