@@ -7,6 +7,7 @@
 
 #include "listNode.hpp"
 #include "listIterator.hpp"
+#include "../sequenceContainer.hpp"
 
 /**
  * @brief A class representing the abstract base class for linked list data structures
@@ -16,16 +17,9 @@
  * @tparam T The type of the elements stored in the linked list
  */
 template <typename T>
-class AbstractLinkedList {
+class AbstractLinkedList : public SequenceContainer {
 
 public:
-
-    /**
-     * @brief Returns the number of elements in the linked list
-     *
-     * @return The number of elements in the linked list
-     */
-    virtual size_t get_size() const = 0;
 
     /**
      * @brief Inserts a new element at the front of the linked list
