@@ -22,7 +22,7 @@ public:
      * @brief Returns an iterator to the first element in the list.
      * @return A SinglyLinkedListIterator pointing to the first element in the list.
      */
-    virtual SinglyLinkedListIterator<T> get_front() const = 0 ;
+    virtual void get_front() const = 0 ;
 
     /**
      * @brief Inserts a new element after the given predecessor node.

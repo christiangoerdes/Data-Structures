@@ -15,8 +15,7 @@ public:
     }
 
     // Returns an iterator to the first node in the list
-    SinglyLinkedListIterator<T> get_front() const override {
-        return SinglyLinkedListIterator<T>(head);
+    void get_front() const override {
     }
 
     // Inserts a new node with data t at the front of the list

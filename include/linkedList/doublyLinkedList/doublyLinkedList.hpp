@@ -29,7 +29,7 @@ public:
      *
      * @return DoublyLinkedListIterator<T> An iterator pointing to the front node
      */
-    virtual DoublyLinkedListIterator<T> get_front() const = 0;
+    virtual void get_front() const = 0;
 
     /**
      * @brief Insert a new node with the given data after the given predecessor node
@@ -37,14 +37,14 @@ public:
      * @param predecessor A shared pointer to the predecessor node
      * @param t The data to be stored in the new node
      */
-    virtual void insert_after(const std::shared_ptr<DoublyLinkedListNode<T>>& predecessor, const T& t) = 0;
+    virtual void insert_after(std::shared_ptr<DoublyLinkedListNode<T>> predecessor, const T& t) = 0;
 
     /**
      * @brief Get the iterator to the tail node of the linked list
      *
      * @return DoublyLinkedListIterator<T> An iterator pointing to the tail node
      */
-    virtual DoublyLinkedListIterator<T> get_tail() const = 0;
+    virtual void get_tail() const = 0;
 
     /**
      * @brief Remove the given node from the linked list

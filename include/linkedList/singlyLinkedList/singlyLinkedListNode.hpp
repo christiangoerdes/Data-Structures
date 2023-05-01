@@ -15,56 +15,26 @@
  */
 template <typename T>
 class SinglyLinkedListNode {
-
 public:
+    SinglyLinkedListNode(T newData) : data(newData), next(nullptr) {}
 
-    /**
-     * @brief Constructs a SinglyLinkedListNode object with the given data.
-     *
-     * @param newData The data to store in the node.
-     */
-    SinglyLinkedListNode(T newData) {
-        data = newData;
-        next = nullptr;
-    }
-
-    /**
-     * @brief Returns a const reference to the data stored in the node.
-     *
-     * @return A const reference to the data stored in the node.
-     */
-    const T& get_data() const {
+    virtual const T& get_data() const {
         return data;
     }
 
-    /**
-     * @brief Sets the data stored in the node to the given value.
-     *
-     * @param newData The new value to store in the node.
-     */
-    void set_data(const T& newData) {
+    virtual void set_data(const T& newData) {
         data = newData;
     }
 
-    /**
-     * @brief Returns a shared pointer to the next node in the list.
-     *
-     * @return A shared pointer to the next node in the list.
-     */
-    std::shared_ptr<SinglyLinkedListNode<T>> get_next() const {
+    virtual std::shared_ptr<SinglyLinkedListNode<T>>& get_next() const {
         return next;
     }
 
-    /**
-     * @brief Sets the next node in the list to the given node.
-     *
-     * @param nextNode A shared pointer to the next node in the list.
-     */
-    virtual void set_next(std::shared_ptr<SinglyLinkedListNode<T>> nextNode) {
+    virtual void set_next(const std::shared_ptr<SinglyLinkedListNode<T>>& nextNode) {
         next = nextNode;
     }
 
 private:
+    T data;
     std::shared_ptr<SinglyLinkedListNode<T>> next;
-    T data; ///< Data stored in the node
 };

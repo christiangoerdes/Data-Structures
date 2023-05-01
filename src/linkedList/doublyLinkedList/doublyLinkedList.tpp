@@ -13,13 +13,11 @@ public:
     }
 
     // returns an iterator to the first element in the list
-    DoublyLinkedListIterator<T> get_front() const override {
-        return DoublyLinkedListIterator<T>(head);
+    void get_front() const override {
     }
 
     // returns an iterator to the last element in the list
-    DoublyLinkedListIterator<T> get_tail() const override {
-        return DoublyLinkedListIterator<T>(head);
+    void get_tail() const override {
     }
 
     // inserts a new element at the front of the list
@@ -37,7 +35,7 @@ public:
     }
 
     // inserts a new element after a specified node
-    void insert_after(const std::shared_ptr<DoublyLinkedListNode<T>>& predecessor, const T& t) override {
+    void insert_after(std::shared_ptr<DoublyLinkedListNode<T>> predecessor, const T& t) override {
         auto newNode = std::make_shared<DoublyLinkedListNode<T>>(t);
         auto successor = predecessor->get_next();
         predecessor->set_next(newNode);
