@@ -13,24 +13,24 @@ public:
     virtual size_t size() const = 0;
 
     /**
-     * @brief Get an iterator pointing to the element with the highest priority
-     * @return Iterator to the element with highest priority
+     * @brief Returns an iterator pointing at the element with the highest priority
+     * @return An iterator pointing at the max element in the queue
      */
-    virtual void get_first_element() const = 0;
+    virtual PriorityQueueIterator<T> get_front() const = 0;
 
     /**
      * @brief Insert a new element with priority p
      * @param t Data to be stored in the new element
      */
-    virtual void add(const T& t, const size_t p) = 0;
+    virtual void push(const T& t, const size_t p) = 0;
 
     /**
      * @brief Get element with the highest priority
      */
-    virtual void get_highest() const = 0;
+    virtual void top() const = 0;
 
     /**
      * @brief Remove element with the highest priority
      */
-    virtual void remove_highest() = 0;
+    virtual void pop() = 0;
 };
