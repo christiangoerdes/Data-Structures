@@ -26,11 +26,11 @@ public:
         data = newData;
     }
 
-    virtual std::shared_ptr<SinglyLinkedListNode<T>>& get_next() const {
+    virtual std::shared_ptr<SinglyLinkedListNode<T>> get_next() const {
         return next;
     }
 
-    virtual void set_next(const std::shared_ptr<SinglyLinkedListNode<T>>& nextNode) {
+    virtual void set_next(const std::shared_ptr<SinglyLinkedListNode<T>> nextNode) {
         next = nextNode;
     }
 
