@@ -37,7 +37,7 @@ file(GLOB SRC_FILES
 # examples/demo1.cpp und allen Quelldateien in
 # SRC_FILES (also alle im Verzeichnis src/)
 add_executable(demo_1
-        examples/singlyLinkedList/main.cpp
+        examples/priorityQueue/main.cpp
         ${SRC_FILES}
         )
 
