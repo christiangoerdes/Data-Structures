@@ -6,7 +6,6 @@
 
 #pragma once
 #include <memory>
-#include "../listNode.hpp"
 
 /**
  * @brief A class representing a node for a doubly linked list
@@ -14,11 +13,10 @@
  * @tparam T The type of data stored in the node
  */
 template <typename T>
-class DoublyLinkedListNode : public ListNode<T> {
+class DoublyLinkedListNode  {
 
 public:
 
-    using ListNode<T>::data;
     /**
      * @brief Construct a new Doubly Linked List Node object with the given data
      *
@@ -87,4 +85,5 @@ public:
 private:
     std::shared_ptr<DoublyLinkedListNode<T>> next; /**< A shared pointer to the next node in the list */
     std::shared_ptr<DoublyLinkedListNode<T>> prev; /**< A shared pointer to the previous node in the list */
+    T data;
 };

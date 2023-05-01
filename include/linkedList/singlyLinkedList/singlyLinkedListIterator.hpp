@@ -5,14 +5,12 @@
 
 #pragma once
 
-#include "../listIterator.hpp"
-
 template <typename T>
 /**
  * @class SinglyLinkedListIterator
  * @brief Iterator for a singly linked list.
  */
-class SinglyLinkedListIterator : public ListIterator<T> {
+class SinglyLinkedListIterator {
 public:
     /**
      * @brief Constructor for the SinglyLinkedListIterator class.
@@ -32,7 +30,7 @@ public:
      * @brief Overloaded member access operator.
      * @return Pointer to the current node.
      */
-    std::shared_ptr<ListNode<T>> operator->() const {
+    std::shared_ptr<SinglyLinkedListNode<T>> operator->() const {
         return current;
     }
 

@@ -5,7 +5,6 @@
 
 #pragma once
 #include <memory>
-#include "../listNode.hpp"
 
 /**
  * @brief A node of a singly linked list that stores an element of type T.
@@ -15,10 +14,9 @@
  * @tparam T The type of the element stored in the node.
  */
 template <typename T>
-class SinglyLinkedListNode : ListNode<T> {
+class SinglyLinkedListNode {
 
 public:
-    using ListNode<T>::data;
 
     /**
      * @brief Constructs a SinglyLinkedListNode object with the given data.
@@ -68,4 +66,5 @@ public:
 
 private:
     std::shared_ptr<SinglyLinkedListNode<T>> next;
+    T data; ///< Data stored in the node
 };

@@ -5,8 +5,6 @@
 
 #pragma once
 
-#include "listNode.hpp"
-#include "listIterator.hpp"
 #include "../sequenceContainer.hpp"
 
 /**

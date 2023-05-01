@@ -4,8 +4,7 @@
  */
 
 #pragma once
-
-#include "../ListIterator.hpp"
+#include "doublyLinkedListNode.hpp"
 
 /**
  * @brief Iterator class for a doubly linked list
@@ -17,7 +16,7 @@
  * @tparam T The type of data stored in the linked list
  */
 template <typename T>
-class DoublyLinkedListIterator : public ListIterator<T> {
+class DoublyLinkedListIterator {
 public:
 
     /**
@@ -41,7 +40,7 @@ public:
      *
      * @return std::shared_ptr<ListNode<T>> A shared pointer to the current node
      */
-    std::shared_ptr<ListNode<T>> operator->() const {
+    std::shared_ptr<DoublyLinkedListNode<T>> operator->() const {
         return current;
     }
 
