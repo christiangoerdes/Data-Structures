@@ -5,10 +5,11 @@
 
 #pragma once
 
+#include "../sequenceContainer.hpp"
 #include "../linkedList/doublyLinkedList/doublyLinkedList.hpp"
 
 template <typename T>
-class AbstractQueue {
+class AbstractQueue : public SequenceContainer {
 public:
 
 };
