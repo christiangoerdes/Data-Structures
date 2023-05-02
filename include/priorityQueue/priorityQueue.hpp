@@ -51,6 +51,7 @@ public:
                 }
             }
         }
+        size += 1;
     }
 
     PQueueNodePtr top() const override {
@@ -58,7 +59,40 @@ public:
     }
 
     PQueueNodePtr pop() const override {
+        // find the leftmost node at the bottom of the heap
+        SinglyLinkedList<int> bit_list;
 
+        for (dec = size + 1; dec > 1; dec /= 2) { // finding the leftmost free spot at the bottom of the heap
+            bit_list.insert_front(dec % 2)
+        }
+
+        PQueueNodePtr current_node = root;
+        for (int x : bit_list.front()) { // do I really need to write "front" here? Gotta ask Chris
+            bit_list.remove_front();
+            if (bit_list.empty()) { // the node can now be inserted at the correct position
+                if (x == 0) {
+                    current_node->get_left_child()->set_left_child(root->get_left_child());
+                    current_node->get_left_child()->set_left_child(root->get_right_child());
+                    root = current_node->get_left_child();
+                    current_node->set_left_child(nullptr);
+                }
+                else {
+                    current_node->get_right_child()->set_left_child(root->get_left_child());
+                    current_node->get_right_child()->set_left_child(root->get_right_child());
+                    root = current_node->get_right_child();
+                    current_node->set_right_child(nullptr);
+                }
+                size -= 1;
+            }
+            else { // further movement down the heap is required
+                if (x == 0) {
+                    current_node = current_node->get_left_child();
+                }
+                else {
+                    current_node = current_node->get_right_child();
+                }
+            }
+        }
     }
 
 private:
