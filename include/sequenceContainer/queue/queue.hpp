@@ -6,3 +6,9 @@
 #pragma once
 
 #include "../linkedList/doublyLinkedList/doublyLinkedList.hpp"
+
+template <typename T>
+class AbstractQueue {
+public:
+
+};
