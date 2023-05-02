@@ -21,9 +21,10 @@ public:
     }
 
     void push(const T& t) override {
-        // noch falsch implementiert, da Heapify fehlt
-
         PQueueNodePtr new_node = std::make_shared<PriorityQueueNode<T>>(t);
+
+        // es wird zwar bestimmt, wo man sich potenziell hinbewegen kann, jedoch ist dann ja die heap-eigenschaft nicht gegeben!
+        // also kann man einfach
 
         SinglyLinkedList<int> bit_list;
 
@@ -32,10 +33,10 @@ public:
         }
 
         PQueueNodePtr current_node = root;
-        for (int x : bit_list.front()) { // do I really need to write "front" here? Gotta ask Chris
+        for (auto x = bit_list.get_front(); x != nullptr; x++) { // do I really need to write "front" here? Gotta ask Chris
             bit_list.remove_front();
-            if (bit_list.empty()) { // the node can now be inserted at the correct position
-                if (x == 0) {
+            if (bit_list.get_size() == 0) { // the node can now be inserted at the correct position
+                if (*x == 0) {
                     current_node->set_left_child(new_node);
                 }
                 else {
@@ -43,7 +44,7 @@ public:
                 }
             }
             else { // further movement down the heap is required
-                if (x == 0) {
+                if (*x == 0) {
                     current_node = current_node->get_left_child();
                 }
                 else {
@@ -51,6 +52,10 @@ public:
                 }
             }
         }
+
+        // Die Node sitzt jetzt an der richtigen Position! Heapify implementieren!
+
+
         size_ += 1;
     }
 
@@ -59,7 +64,6 @@ public:
     }
 
     PQueueNodePtr pop() override {
-        // noch falsch implementiert, da Heapify fehlt
         // find the leftmost node at the bottom of the heap
         SinglyLinkedList<int> bit_list;
 
@@ -68,10 +72,10 @@ public:
         }
 
         PQueueNodePtr current_node = root;
-        for (int x : bit_list.front()) { // do I really need to write "front" here? Gotta ask Chris
+        for (auto x = bit_list.get_front(); x != nullptr; x++) {
             bit_list.remove_front();
-            if (bit_list.empty()) { // the node can now be inserted at the correct position
-                if (x == 0) {
+            if (bit_list.get_size() == 0) { // the node can now be inserted at the correct position
+                if (*x == 0) {
                     current_node->get_left_child()->set_left_child(root->get_left_child());
                     current_node->get_left_child()->set_left_child(root->get_right_child());
                     root = current_node->get_left_child();
@@ -86,7 +90,7 @@ public:
                 size_--;
             }
             else { // further movement down the heap is required
-                if (x == 0) {
+                if (*x == 0) {
                     current_node = current_node->get_left_child();
                 }
                 else {
@@ -96,6 +100,13 @@ public:
         }
     }
 private:
+
+    void heapify(PQueueNodePtr node) {
+        // to be implemented
+
+
+    }
+
     size_t size_;
     PQueueNodePtr root;
 };

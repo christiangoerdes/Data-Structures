@@ -1,6 +1,7 @@
 #pragma once
 
 #include <priorityQueue/priorityQueueNode.hpp>
+#include <sequenceContainer/linkedList/singlyLinkedList/singlyLinkedList.hpp>
 #include <memory>
 
 template<typename T>
@@ -36,4 +37,4 @@ public:
     virtual PQueueNodePtr pop() = 0;
 };
 
-#include <../src/priorityQueue/priorityQueue.tpp>
+#include <priorityQueue/priorityQueue.tpp>

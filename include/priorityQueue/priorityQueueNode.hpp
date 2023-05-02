@@ -49,6 +49,14 @@ public:
     }
 
     /**
+     * @brief Returns a reference to the parent node
+     * @return A reference to the parent node
+     */
+    const Nodeptr get_parent() const {
+        return parent_;
+    }
+
+    /**
      * @brief Returns a reference to the data stored in the node
      * @return A reference to the data stored in the node
      */
@@ -58,6 +66,7 @@ public:
 
 private:
     T data_; /**< The data stored in the node */
+    Nodeptr parent_; /**<The parent node */
     Nodeptr left_child; /**< A shared pointer to the left child of the node */
     Nodeptr right_child; /**< A shared pointer to the right child of the node */
 };
