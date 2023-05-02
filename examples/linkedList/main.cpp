@@ -23,7 +23,9 @@ int main() {
 
     // Print the contents of the singly linked list again
     std::cout << "Singly linked list after removing an element:" << std::endl;
-    singlyList.print(); // Output: 1, 3
+    for (SinglyLinkedListIterator<int> it = singlyList.get_front(); it != SinglyLinkedListIterator<int>(nullptr); ++it) {
+        std::cout << *it << ", ";
+    }
 
     std::cout << "\n" << std::endl;
 
@@ -50,7 +52,13 @@ int main() {
 
     // Print the contents of the doubly linked list again
     std::cout << "Doubly linked list after removing an element:" << std::endl;
-    doublyList.print(); // Output: one, two, three
+    for (DoublyLinkedListIterator<std::string> iter = doublyList.get_front(); iter != doublyList.get_tail(); iter++) {
+        std::cout << *iter << " ";
+    }
+    std::cout << *doublyList.get_tail() << std::endl;
+
+// Output: 1, 2, 3,
+
 
     return 0;
 }
