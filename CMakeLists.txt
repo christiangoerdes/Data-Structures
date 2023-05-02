@@ -33,11 +33,10 @@ file(GLOB SRC_FILES
 #---------------Erzeuge Projekt----------------#
 #----------------------------------------------#
 
-# Baue das Programm 'demo1' aus den Quellen
-# examples/demo1.cpp und allen Quelldateien in
-# SRC_FILES (also alle im Verzeichnis src/)
-add_executable(demo_1
-        examples/singlyLinkedList/main.cpp
+# Baue das Programm 'linkedListMain' aus den Quellen
+# examples/linkedList
+add_executable(linkedListMain
+        examples/linkedList/main.cpp
         ${SRC_FILES}
         )
 
