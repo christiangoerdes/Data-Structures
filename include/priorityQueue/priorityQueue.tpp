@@ -1,6 +1,6 @@
 #pragma once
 
-#include <priorityQueue/abstractPriorityQueue.hpp>
+#include "abstractPriorityQueue.hpp"
 
 template<typename T>
 class PriorityQueue : public AbstractPriorityQueue<T> {
@@ -16,9 +16,9 @@ public:
         return size_;
     }
 
-    PriorityQueueIterator<T> get_front() const override {
+    //PriorityQueueIterator<T> get_front() const override {
         // noch implementieren
-    }
+    //}
 
     void push(const T& t) override {
         PQueueNodePtr new_node = std::make_shared<PriorityQueueNode<T>>(t);
@@ -53,9 +53,7 @@ public:
             }
         }
 
-        // Die Node sitzt jetzt an der richtigen Position! Heapify implementieren!
-
-
+        heapify(current_node);
         size_ += 1;
     }
 
@@ -98,13 +96,31 @@ public:
                 }
             }
         }
+        // some sort of heapify() call
     }
+
 private:
 
+    /**
+     * @brief Handles pointer resetting to restore heap property if violated
+     * @param node Starting node. Needs to be bottom-level in order to ensure heap property after the method call
+     */
     void heapify(PQueueNodePtr node) {
-        // to be implemented
-
-
+        while ((node != root) & (node->get_data() > node->get_parent()->get_data())) { // heap property violated
+            node->get_parent()->set_left_child(node->get_left_child());
+            node->get_parent()->set_right_child(node->get_right_child());
+            if (node->get_parent() == root) {
+                root = node;
+            }
+            else { // ensures the existence of the parent node's parent
+                if (node->get_parent()->get_parent()->get_left_child() == node->get_parent()) { // if the parent node is the left child of its own parent node, set its parent node's child to the current node
+                    node->get_parent()->get_parent()->set_left_child(node);
+                }
+                else {
+                    node->get_parent()->get_parent()->set_right_child(node);
+                }
+            }
+        }
     }
 
     size_t size_;

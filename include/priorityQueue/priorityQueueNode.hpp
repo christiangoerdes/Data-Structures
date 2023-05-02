@@ -57,6 +57,13 @@ public:
     }
 
     /**
+     * @brief Sets a new parent node
+     */
+    void set_parent(const Nodeptr new_parent) {
+        parent_ = new_parent;
+    }
+
+    /**
      * @brief Returns a reference to the data stored in the node
      * @return A reference to the data stored in the node
      */
