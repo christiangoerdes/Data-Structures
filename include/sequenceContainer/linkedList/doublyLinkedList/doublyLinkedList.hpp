@@ -7,7 +7,7 @@
 
 #include "doublyLinkedListNode.hpp"
 #include "doublyLinkedListIterator.hpp"
-#include "../linkedList.hpp"
+#include "../LinkedList.hpp"
 
 /**
  * @brief Abstract base class for doubly linked list
