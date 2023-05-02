@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "singlyLinkedListNode.hpp"
 template <typename T>
 
