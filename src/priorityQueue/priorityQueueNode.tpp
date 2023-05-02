@@ -1,6 +1,7 @@
 #pragma once
 
 #include <memory>
+#include <priorityQueue/priorityQueueNode.hpp>
 
 template<typename T>
 class PriorityQueueNode {
