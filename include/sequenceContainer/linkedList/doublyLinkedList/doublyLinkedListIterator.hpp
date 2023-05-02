@@ -11,7 +11,7 @@ public:
 
     // Overloaded prefix increment operator
     DoublyLinkedListIterator& operator++() {
-        curr = curr.get_next;
+        curr = curr->get_next();
         return *this;
     }
 

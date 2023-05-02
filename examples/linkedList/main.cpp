@@ -52,8 +52,8 @@ int main() {
 
     // Print the contents of the doubly linked list again
     std::cout << "Doubly linked list after removing an element:" << std::endl;
-    for (DoublyLinkedListIterator<std::string> iter = doublyList.get_front(); iter != doublyList.get_tail(); iter++) {
-        std::cout << *iter << " ";
+    for (DoublyLinkedListIterator<std::string> it = doublyList.get_front(); it != DoublyLinkedListIterator<std::string>(nullptr); ++it) {
+        std::cout << *it << " ";
     }
     std::cout << *doublyList.get_tail() << std::endl;
 
