@@ -1,7 +1,6 @@
-/*
 #pragma once
-#include "doublyLinkedListNode.hpp"
 
+#include "doublyLinkedListNode.hpp"
 
 template <typename T>
 class DoublyLinkedListIterator {
@@ -51,4 +50,3 @@ public:
 private:
     std::shared_ptr<DoublyLinkedListNode<T>> current;
 };
- */

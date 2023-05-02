@@ -13,11 +13,13 @@ public:
     }
 
     // returns an iterator to the first element in the list
-    void get_front() const override {
+    DoublyLinkedListIterator<T> get_front() const override {
+        return DoublyLinkedListIterator<T>(head);
     }
 
     // returns an iterator to the last element in the list
-    void get_tail() const override {
+    DoublyLinkedListIterator<T> get_tail() const override {
+        return DoublyLinkedListIterator<T>(head);
     }
 
     // inserts a new element at the front of the list

@@ -1,6 +1,7 @@
-/*
 #pragma once
 
+
+#include "singlyLinkedListNode.hpp"
 template <typename T>
 
 class SinglyLinkedListIterator {
@@ -51,4 +52,3 @@ public:
 private:
     std::shared_ptr<SinglyLinkedListNode<T>> current;
 };
- */

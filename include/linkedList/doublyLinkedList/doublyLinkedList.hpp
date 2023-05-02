@@ -29,7 +29,7 @@ public:
      *
      * @return DoublyLinkedListIterator<T> An iterator pointing to the front node
      */
-    virtual void get_front() const = 0;
+    virtual DoublyLinkedListIterator<T> get_front() const = 0;
 
     /**
      * @brief Insert a new node with the given data after the given predecessor node
@@ -44,7 +44,7 @@ public:
      *
      * @return DoublyLinkedListIterator<T> An iterator pointing to the tail node
      */
-    virtual void get_tail() const = 0;
+    virtual DoublyLinkedListIterator<T> get_tail() const = 0;
 
     /**
      * @brief Remove the given node from the linked list
