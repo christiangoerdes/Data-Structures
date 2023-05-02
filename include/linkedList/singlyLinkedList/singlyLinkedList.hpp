@@ -43,4 +43,4 @@ public:
     virtual void remove_after(const std::shared_ptr<SinglyLinkedListNode<T>>& predecessor) = 0;
 };
 
-#include "../../../src/linkedList/singlyLinkedList/singlyLinkedList.tpp"
+#include "singlyLinkedList.tpp"
