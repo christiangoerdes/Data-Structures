@@ -1,50 +1,19 @@
 #pragma once
 
 #include "doublyLinkedListNode.hpp"
+#include "../singlyLinkedList/singlyLinkedListIterator.hpp"
 
 template <typename T>
-class DoublyLinkedListIterator {
+class DoublyLinkedListIterator : SinglyLinkedListIterator<T>{
 public:
 
-    DoublyLinkedListIterator(std::shared_ptr<DoublyLinkedListNode<T>> node) : current(node) {}
-
-
-    T& operator*() const {
-        return current->get_data();
+    DoublyLinkedListIterator(std::shared_ptr<DoublyLinkedListNode<T>> node) : SinglyLinkedListIterator<T>(node){
+        current = node;
     }
 
-
-    std::shared_ptr<DoublyLinkedListNode<T>> operator->() const {
-        return current;
-    }
-
-
-    DoublyLinkedListIterator& operator++() {
-        current = current->get_next();
+    DoublyLinkedListIterator& operator--() {
+        current = current->get_prev();
         return *this;
-    }
-
-
-    DoublyLinkedListIterator operator++(int) {
-        DoublyLinkedListIterator temp(current);
-        ++(*this);
-        return temp;
-    }
-
-    DoublyLinkedListIterator operator--(int) {
-        DoublyLinkedListIterator temp(current);
-        --(*this);
-        return temp;
-    }
-
-
-    bool operator==(const DoublyLinkedListIterator& other) const {
-        return current == other.current;
-    }
-
-
-    bool operator!=(const DoublyLinkedListIterator& other) const {
-        return !(*this == other);
     }
 
 private:
