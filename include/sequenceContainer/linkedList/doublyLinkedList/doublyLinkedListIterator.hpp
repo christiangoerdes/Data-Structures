@@ -9,23 +9,22 @@ class DoublyLinkedListIterator {
 public:
     DoublyLinkedListIterator(std::shared_ptr<DoublyLinkedListNode<T>> curr) : curr(curr) {}
 
-    // Prefix increment operator
-    DoublyLinkedListIterator<T>& operator++() {
-
-        curr = std::dynamic_pointer_cast<DoublyLinkedListNode<T>>(curr->get_next());
+    // Overloaded prefix increment operator
+    DoublyLinkedListIterator& operator++() {
+        curr = curr.get_next;
         return *this;
     }
 
-    // Postfix increment operator
-    DoublyLinkedListIterator<T> operator++(int) {
-        DoublyLinkedListIterator<T> tmp(*this);
-        ++(*this);
-        return tmp;
+    // Overloaded postfix increment operator
+    DoublyLinkedListIterator operator++(int) {
+        DoublyLinkedListIterator<T> temp(curr);
+        curr = curr->get_next();
+        return temp;
     }
 
-    // Prefix decrement operator
+        // Prefix decrement operator
     DoublyLinkedListIterator<T>& operator--() {
-        curr = std::dynamic_pointer_cast<DoublyLinkedListNode<T>>(curr->get_prev());
+        curr = curr->get_prev();
         return *this;
     }
 
