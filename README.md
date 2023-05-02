@@ -19,11 +19,10 @@ Der Fokus des Projekts liegt insbesondere auf der effektiven Organisation der ve
 
 ## Build erstellen
 Um einen Build zu erstellen, muss das folgende Command im Wurzelverzeichnis des Projekts eingegeben werden:
+    
     build-command: cmake -S . -B build && cmake --build build
 
 ## Mitglieder
--Ibrahim Fakhir
--Christian Gördes
--Sergej Zuev
-
----
+- Ibrahim Fakhir
+- Christian Gördes
+- Sergej Zuev
