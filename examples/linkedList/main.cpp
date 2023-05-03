@@ -10,7 +10,7 @@ int main() {
     // Insert elements at the front of the singly linked list
     singlyList.insert_front(3);
     singlyList.insert_front(2);
-    singlyList.insert_front(1);
+    singlyList.insert_after(singlyList.get_front(),1);
 
     // Print the contents of the singly linked list
     std::cout << "Singly linked list:" << std::endl;

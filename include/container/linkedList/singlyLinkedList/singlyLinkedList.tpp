@@ -64,6 +64,11 @@ public:
         size--;
     }
 
+    // Removes the node after the given Iterator
+    void remove_after(SinglyLinkedListIterator<T> predecessor) override {
+        remove_after(predecessor.get_pointer());
+    }
+
     // Prints the data in all nodes of the list
     void print() const {
         std::shared_ptr<SinglyLinkedListNode<T>> curr = head;
