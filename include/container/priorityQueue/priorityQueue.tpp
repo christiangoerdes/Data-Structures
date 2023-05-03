@@ -1,8 +1,7 @@
 #pragma once
 
 #include "abstractPriorityQueue.hpp"
-#include <string>
-#include <iostream>
+#include "priorityQueueIterator.hpp"
 #include <vector>
 
 template<typename T>
@@ -21,9 +20,15 @@ public:
         return size_ == 0;
     }
 
-    //PriorityQueueIterator<T> get_front() const override {
-    // noch implementieren
-    //}
+    // returns an iterator to the first element in the list
+    PriorityQueueIterator<T> get_front() const override {
+        return PriorityQueueIterator<T>(this, 0);
+    }
+
+    // returns an iterator to the last element in the list
+    PriorityQueueIterator<T> get_back() const override {
+        return PriorityQueueIterator<T>(this, size_);
+    }
 
     void push(const T& t) override {
         heap.push_back(t);

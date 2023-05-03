@@ -1,36 +1,29 @@
 #include <gtest/gtest.h>
 #include "../../include/container/linkedList/doublyLinkedList/doublyLinkedList.hpp"
+#include "../../include/container/priorityQueue/abstractPriorityQueue.hpp"
 
-// Unit tests for DoublyLinkedList
-TEST(DoublyLinkedListTest, InsertionAndRemoval) {
-DoublyLinkedList<std::string> list;
-ASSERT_EQ(list.get_size(), 0);
+TEST(PriorityQueueTest, InsertionAndRemoval) {
+PriorityQueue<int> queue;
 
-// Insert elements at the front of the list
-list.insert_front("1");
-ASSERT_EQ(list.get_size(), 1);
-ASSERT_EQ(*list.get_front(), "1");
-ASSERT_EQ(*list.get_end(), "1");
+// Empty initialization
+ASSERT_EQ(queue.get_size(), 0);
 
-list.insert_front("2");
-ASSERT_EQ(list.get_size(), 2);
-ASSERT_EQ(*list.get_front(), "2");
-ASSERT_EQ(*list.get_end(), "1");
+// Insert an element
+queue.push(1);
+ASSERT_EQ(queue.get_size(), 1);
+ASSERT_EQ(*queue.get_front(), 1);
+ASSERT_EQ(*queue.get_back(), 1);
 
-// Insert element after a given node
-auto iter = list.get_front();
-list.insert_after(iter, "3");
-ASSERT_EQ(list.get_size(), 3);
-ASSERT_EQ(*iter, "2");
-ASSERT_EQ(*(++iter), "3");
-ASSERT_EQ(*(++iter), "1");
 
-// Remove an element from the front of the list
-iter = list.get_front();
-list.remove(iter);
-ASSERT_EQ(list.get_size(), 2);
-ASSERT_EQ(*list.get_front(), "3");
-ASSERT_EQ(*list.get_end(), "1");
+// Insert elements of higher priority
+queue.push(2);
+queue.push(3);
+ASSERT_EQ(queue.get_size(), 3);
+ASSERT_EQ(*queue.get_front(), 3);
+
+// Insert an element of lower priority
+queue.push(0);
+ASSERT_EQ()
 
 // Remove the element after a given node
 iter = list.get_front();
