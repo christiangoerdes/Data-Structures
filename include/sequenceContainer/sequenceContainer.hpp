@@ -3,7 +3,7 @@
 /**
  * @brief A class representing the abstract base class sequence container
  *
- * This class defines the interface that must be implemented by any derived linked list classes.
+ * This class defines the interface that must be implemented by any derived sequence container
  */
 
 class SequenceContainer {
