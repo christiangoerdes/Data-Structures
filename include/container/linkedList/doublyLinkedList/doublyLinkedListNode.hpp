@@ -19,7 +19,7 @@ public:
     DoublyLinkedListNode(T newData) {
         data = newData;
         next = nullptr;
-        prev = nullptr;
+        prev = std::weak_ptr<DoublyLinkedListNode<T>>();
     }
 
     /**
@@ -59,11 +59,11 @@ public:
     }
 
     /**
-     * @brief Returns a shared pointer to the previous node in the list.
+     * @brief Returns a weak pointer to the previous node in the list.
      *
-     * @return std::shared_ptr<DoublyLinkedListNode<T>> A shared pointer to the previous node in the list.
+     * @return std::weak_ptr<DoublyLinkedListNode<T>> A weak pointer to the previous node in the list.
      */
-    std::shared_ptr<DoublyLinkedListNode<T>> get_prev() const {
+    std::weak_ptr<DoublyLinkedListNode<T>> get_prev() const {
         return prev;
     }
 
@@ -72,13 +72,12 @@ public:
      *
      * @param prevNode A shared pointer to the previous node in the list.
      */
-    void set_prev(std::shared_ptr<DoublyLinkedListNode<T>> prevNode) {
+    void set_prev(const std::shared_ptr<DoublyLinkedListNode<T>> prevNode) {
         prev = prevNode;
     }
 
 private:
     T data; /**< The data stored in the node. */
     std::shared_ptr<DoublyLinkedListNode<T>> next; /**< A shared pointer to the next node in the list. */
-    std::shared_ptr<DoublyLinkedListNode<T>> prev; /**< A shared pointer to the previous node in the list. */
+    std::weak_ptr<DoublyLinkedListNode<T>> prev; /**< A weak pointer to the previous node in the list. */
 };
-

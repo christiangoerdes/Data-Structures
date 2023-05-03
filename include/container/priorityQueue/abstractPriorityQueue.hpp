@@ -2,17 +2,17 @@
 
 #include "priorityQueueNode.hpp"
 #include "../linkedList/singlyLinkedList/singlyLinkedList.hpp"
+#include "../container.hpp"
 #include <memory>
 
 template<typename T>
-class AbstractPriorityQueue {
+class AbstractPriorityQueue : public Container{
     typedef std::shared_ptr<PriorityQueueNode<T>> PQueueNodePtr;
 public:
     /**
      * @brief Get the size of the queue
      * @return The number of elements in the queue
      */
-    virtual size_t size() const = 0;
 
     /**
      * @brief Returns an iterator pointing at the element with the highest priority

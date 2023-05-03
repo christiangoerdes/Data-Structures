@@ -42,6 +42,12 @@ public:
      * @param predecessor A shared pointer to the predecessor node.
      */
     virtual void remove_after(const std::shared_ptr<SinglyLinkedListNode<T>>& predecessor) = 0;
+
+    /**
+     * @brief Removes the element after the given iterator.
+     * @param predecessor An iterator of the predecessor node.
+     */
+    virtual void remove_after(SinglyLinkedListIterator<T> predecessor) = 0;
 };
 
 #include "singlyLinkedList.tpp"

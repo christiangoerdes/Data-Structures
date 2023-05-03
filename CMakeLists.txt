@@ -37,9 +37,22 @@ add_executable(linkedListMain
 
 # Baue das Programm 'priorityQueueMain' aus den Quellen
 # examples/priorityQueue
-# add_executable(priorityQueueMain
-#        examples/priorityQueue/main.cpp
-#        )
+ add_executable(priorityQueueMain
+        examples/priorityQueue/main.cpp
+        )
+
+# Baue das Programm 'queueMain' aus den Quellen
+# examples/queue
+add_executable(queueMain
+        examples/queue/main.cpp
+        )
+
+# Baue das Programm `stackMain' aus den Quellen
+# examples/stack
+add_executable(stackMain
+        examples/stack/main.cpp
+        )
+
 
 #----------------------------------------------#
 #----------Download and use GoogleTest---------#
@@ -72,6 +85,16 @@ enable_testing()
 #----------------------------------------------#
 #-------------Erzeuge Testprogramme------------#
 #----------------------------------------------#
+
+# Declare test program singlyLinkedList_text
+add_executable(singlyLinkedList_test tests/linkedList/singlyLinkedList_test.cpp)
+target_link_libraries(singlyLinkedList_test GTest::gtest_main)
+gtest_discover_tests(singlyLinkedList_test)
+
+# Declare test program doublyLinkedList_text
+add_executable(doublyLinkedList_test tests/linkedList/doublyLinkedList_test.cpp)
+target_link_libraries(doublyLinkedList_test GTest::gtest_main)
+gtest_discover_tests(doublyLinkedList_test)
 
 # Declare test program demo_1_test
 add_executable(demo_1_test tests/demo_1_test.cpp ${SRC_FILES})

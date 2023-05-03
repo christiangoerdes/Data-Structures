@@ -1,6 +1,6 @@
 /**
  * @file doublyLinkedList.hpp
- * @brief Header file for the AbstractQueue class
+ * @brief Header file for the AbstractStack class
  */
 
 #pragma once
@@ -10,13 +10,13 @@
 #include <cstddef>
 
 /**
- * @brief Abstract base class for Queue
+ * @brief Abstract base class for Stack
  *
- * This class provides an interface for implementing a Queue.
+ * This class provides an interface for implementing a Stack.
  *
  */
 template <typename T>
-class AbstractQueue : public Container {
+class AbstractStack : public Container {
 public:
 
     /**
@@ -34,4 +34,4 @@ public:
     virtual void push(const T& t) = 0;
 };
 
-#include "queue.tpp"
+#include "stack.tpp"

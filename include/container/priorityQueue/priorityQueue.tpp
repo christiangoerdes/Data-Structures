@@ -12,8 +12,12 @@ public:
         // nothing to do here
     }
 
-    size_t size() const override {
+    size_t get_size() const override {
         return size_;
+    }
+
+    bool is_empty() const override {
+        return size_ == 0;
     }
 
     //PriorityQueueIterator<T> get_front() const override {

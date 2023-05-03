@@ -19,7 +19,7 @@ public:
 
     // returns an iterator to the last element in the list
     DoublyLinkedListIterator<T> get_end() const override {
-        return DoublyLinkedListIterator<T>(head);
+        return DoublyLinkedListIterator<T>(tail);
     }
 
     // inserts a new element at the front of the list
@@ -51,13 +51,22 @@ public:
         size++;
     }
 
+    // inserts a new element after a specified iterator
     void insert_after(DoublyLinkedListIterator<T> predecessor, const T& t) override {
         insert_after(predecessor.get_pointer(), t);
     }
 
+    void insert_back(const T& t) override {
+        if(size == 0) {
+            insert_front(t);
+        }else{
+            insert_after(tail, t);
+        }
+    }
+
     // removes a specified node from the list
     void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) override {
-        auto predecessor = node->get_prev();
+        auto predecessor = node->get_prev().lock();
         auto successor = node->get_next();
         if (predecessor) {
             predecessor->set_next(successor);
@@ -70,6 +79,11 @@ public:
             tail = predecessor;
         }
         size--;
+    }
+
+    // removes a specified node from the list
+    void remove (DoublyLinkedListIterator<T> node) override {
+        remove(node.get_pointer());
     }
 
     // prints the contents of the list to the console
@@ -88,7 +102,7 @@ public:
 
     // returns whether the list is empty
     bool is_empty() const override {
-        return head == nullptr;
+        return size == 0;
     }
 
 private:

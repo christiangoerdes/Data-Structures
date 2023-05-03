@@ -38,7 +38,21 @@ public:
      * @param t The data to be stored in the new node
      */
     virtual void insert_after(std::shared_ptr<DoublyLinkedListNode<T>> predecessor, const T& t) = 0;
+
+    /**
+     * @brief Insert a new node with the given data after the given predecessor iterator
+     *
+     * @param predecessor A iterator the predecessor node
+     * @param t The data to be stored in the new node
+     */
     virtual void insert_after(DoublyLinkedListIterator<T> predecessor, const T& t) = 0;
+
+    /**
+     * @brief Insert a new node with the given data at the end of the list
+     *
+     * @param t The data to be stored in the new node
+     */
+    virtual void insert_back(const T& t) = 0;
 
     /**
      * @brief Get the iterator to the tail node of the linked list
@@ -53,6 +67,13 @@ public:
      * @param node A shared pointer to the node to be removed
      */
     virtual void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) = 0;
+
+    /**
+     * @brief Remove the given node from the linked list
+     *
+     * @param node A iterator to the node to be removed
+     */
+    virtual void remove(DoublyLinkedListIterator<T> node) = 0;
 };
 
 #include "doublyLinkedList.tpp"

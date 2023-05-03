@@ -10,7 +10,7 @@ int main() {
     // Insert elements at the front of the singly linked list
     singlyList.insert_front(3);
     singlyList.insert_front(2);
-    singlyList.insert_front(1);
+    singlyList.insert_after(singlyList.get_front(),1);
 
     // Print the contents of the singly linked list
     std::cout << "Singly linked list:" << std::endl;
@@ -38,7 +38,7 @@ int main() {
     doublyList.insert_front("one");
 
     // Insert an element after the head of the doubly linked list
-    auto node = doublyList.get_head()->get_next()->get_prev();
+    auto node = doublyList.get_head()->get_next()->get_prev().lock();
     doublyList.insert_after(node, "four");
 
     // Print the contents of the doubly linked list
