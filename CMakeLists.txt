@@ -23,11 +23,7 @@ set(CMAKE_BUILD_TYPE Debug)
 # Füge Includeverzeichnisse hinzu
 include_directories(include)
 include_directories(external)
-# Legt die Variable SRC_FILES an, die alle
-# .cpp-Dateien des Projekts benennt,
-# die in Verzeichnis src/ liegen.
-file(GLOB SRC_FILES
-        ${PROJECT_SOURCE_DIR}/src/*.cpp)
+
 
 #----------------------------------------------#
 #---------------Erzeuge Projekt----------------#
@@ -37,8 +33,13 @@ file(GLOB SRC_FILES
 # examples/linkedList
 add_executable(linkedListMain
         examples/linkedList/main.cpp
-        ${SRC_FILES}
         )
+
+# Baue das Programm 'priorityQueueMain' aus den Quellen
+# examples/priorityQueue
+# add_executable(priorityQueueMain
+#        examples/priorityQueue/main.cpp
+#        )
 
 #----------------------------------------------#
 #----------Download and use GoogleTest---------#
