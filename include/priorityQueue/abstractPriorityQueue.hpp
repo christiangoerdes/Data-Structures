@@ -1,6 +1,7 @@
 #pragma once
 
-#include <priorityQueue/priorityQueueNode.hpp>
+#include "priorityQueueNode.hpp"
+#include "../sequenceContainer/linkedList/singlyLinkedList/singlyLinkedList.hpp"
 #include <memory>
 
 template<typename T>
@@ -17,7 +18,7 @@ public:
      * @brief Returns an iterator pointing at the element with the highest priority
      * @return An iterator pointing at the max element in the queue
      */
-    virtual PriorityQueueIterator<T> get_front() const = 0;
+    // virtual PriorityQueueIterator<T> get_front() const = 0;
 
     /**
      * @brief Insert a new element into the queue
@@ -36,4 +37,4 @@ public:
     virtual PQueueNodePtr pop() = 0;
 };
 
-#include <../src/priorityQueue/priorityQueue.tpp>
+#include "priorityQueue.tpp"
