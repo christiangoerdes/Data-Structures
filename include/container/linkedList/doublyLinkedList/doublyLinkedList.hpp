@@ -44,7 +44,7 @@ public:
      *
      * @return DoublyLinkedListIterator<T> An iterator pointing to the tail node
      */
-    virtual DoublyLinkedListIterator<T> get_tail() const = 0;
+    virtual DoublyLinkedListIterator<T> get_end() const = 0;
 
     /**
      * @brief Remove the given node from the linked list

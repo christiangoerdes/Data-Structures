@@ -1,5 +1,5 @@
-#include "../../include/sequenceContainer/linkedList/singlyLinkedList/singlyLinkedList.hpp"
-#include "../../include/sequenceContainer/linkedList/doublyLinkedList/doublyLinkedList.hpp"
+#include "../../include/container/linkedList/singlyLinkedList/singlyLinkedList.hpp"
+#include "../../include/container/linkedList/doublyLinkedList/doublyLinkedList.hpp"
 
 #include <iostream>
 
@@ -23,7 +23,9 @@ int main() {
 
     // Print the contents of the singly linked list again
     std::cout << "Singly linked list after removing an element:" << std::endl;
-    singlyList.print(); // Output: 1, 3
+    for (SinglyLinkedListIterator<int> it = singlyList.get_front(); it != SinglyLinkedListIterator<int>(nullptr); ++it) {
+        std::cout << *it << ", ";
+    }
 
     std::cout << "\n" << std::endl;
 
@@ -36,7 +38,7 @@ int main() {
     doublyList.insert_front("one");
 
     // Insert an element after the head of the doubly linked list
-    auto node = doublyList.get_head();
+    auto node = doublyList.get_head()->get_next()->get_prev();
     doublyList.insert_after(node, "four");
 
     // Print the contents of the doubly linked list
@@ -50,7 +52,13 @@ int main() {
 
     // Print the contents of the doubly linked list again
     std::cout << "Doubly linked list after removing an element:" << std::endl;
-    doublyList.print(); // Output: one, two, three
+    for (DoublyLinkedListIterator<std::string> it = doublyList.get_front(); it != DoublyLinkedListIterator<std::string>(nullptr); ++it) {
+        std::cout << *it << " ";
+    }
+    std::cout << *doublyList.get_end() << std::endl;
+
+// Output: 1, 2, 3,
+
 
     return 0;
 }
