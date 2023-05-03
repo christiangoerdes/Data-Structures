@@ -37,9 +37,22 @@ add_executable(linkedListMain
 
 # Baue das Programm 'priorityQueueMain' aus den Quellen
 # examples/priorityQueue
-# add_executable(priorityQueueMain
-#        examples/priorityQueue/main.cpp
-#        )
+ add_executable(priorityQueueMain
+        examples/priorityQueue/main.cpp
+        )
+
+# Baue das Programm 'queueMain' aus den Quellen
+# examples/queue
+add_executable(queueMain
+        examples/queue/main.cpp
+        )
+
+# Baue das Programm `stackMain' aus den Quellen
+# examples/stack
+add_executable(stackMain
+        examples/stack/main.cpp
+        )
+
 
 #----------------------------------------------#
 #----------Download and use GoogleTest---------#
