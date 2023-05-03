@@ -38,7 +38,7 @@ int main() {
     doublyList.insert_front("one");
 
     // Insert an element after the head of the doubly linked list
-    auto node = doublyList.get_head()->get_next()->get_prev();
+    auto node = doublyList.get_head()->get_next()->get_prev().lock();
     doublyList.insert_after(node, "four");
 
     // Print the contents of the doubly linked list
