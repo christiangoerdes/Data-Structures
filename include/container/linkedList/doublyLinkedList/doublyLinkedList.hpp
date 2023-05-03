@@ -48,6 +48,13 @@ public:
     virtual void insert_after(DoublyLinkedListIterator<T> predecessor, const T& t) = 0;
 
     /**
+     * @brief Insert a new node with the given data at the end of the list
+     *
+     * @param t The data to be stored in the new node
+     */
+    virtual void insert_end(const T& t) = 0;
+
+    /**
      * @brief Get the iterator to the tail node of the linked list
      *
      * @return DoublyLinkedListIterator<T> An iterator pointing to the tail node

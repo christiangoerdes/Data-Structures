@@ -22,11 +22,7 @@ public:
     }
 
     void push(const T& t) override {
-        if(list.get_size() == 0) {
-            list.insert_front(t);
-        }else{
-            list.insert_after(list.get_end(), t);
-        }
+        list.insert_end(t);
     }
 
     bool is_empty() const override {

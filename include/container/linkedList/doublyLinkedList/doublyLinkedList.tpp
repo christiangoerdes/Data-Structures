@@ -56,6 +56,14 @@ public:
         insert_after(predecessor.get_pointer(), t);
     }
 
+    void insert_end(const T& t) override {
+        if(size == 0) {
+            insert_front(t);
+        }else{
+            insert_after(tail, t);
+        }
+    }
+
     // removes a specified node from the list
     void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) override {
         auto predecessor = node->get_prev().lock();
