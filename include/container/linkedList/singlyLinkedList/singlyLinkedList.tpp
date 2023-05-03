@@ -80,7 +80,7 @@ public:
 
     // returns whether the list is empty
     bool is_empty() const override {
-        return head == nullptr;
+        return size == 0;
     }
 
 private:
