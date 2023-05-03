@@ -18,4 +18,11 @@ public:
      * @return T An object of the type T
      */
     virtual T pop() const = 0;
+
+    /*
+     * @brief Pushes new item of type T
+     *
+     * @param t Item of type T to insert
+     */
+    virtual void push(T& t) const = 0;
 };
