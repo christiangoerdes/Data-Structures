@@ -18,7 +18,7 @@ public:
     }
 
     // returns an iterator to the last element in the list
-    DoublyLinkedListIterator<T> get_tail() const override {
+    DoublyLinkedListIterator<T> get_end() const override {
         return DoublyLinkedListIterator<T>(head);
     }
 

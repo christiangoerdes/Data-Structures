@@ -55,7 +55,7 @@ int main() {
     for (DoublyLinkedListIterator<std::string> it = doublyList.get_front(); it != DoublyLinkedListIterator<std::string>(nullptr); ++it) {
         std::cout << *it << " ";
     }
-    std::cout << *doublyList.get_tail() << std::endl;
+    std::cout << *doublyList.get_end() << std::endl;
 
 // Output: 1, 2, 3,
 
