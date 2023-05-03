@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../include/priorityQueue/abstractPriorityQueue.hpp"
+#include "../../include/container/priorityQueue/abstractPriorityQueue.hpp"
 #include "queue"
 #include <stdlib.h>
 

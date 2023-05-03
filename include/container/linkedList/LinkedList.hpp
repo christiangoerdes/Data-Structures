@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "../sequenceContainer.hpp"
+#include "../container.hpp"
 
 /**
  * @brief A class representing the abstract base class for linked list data structures
