@@ -1,5 +1,5 @@
-#include "../../include/sequenceContainer/linkedList/singlyLinkedList/singlyLinkedList.hpp"
-#include "../../include/sequenceContainer/linkedList/doublyLinkedList/doublyLinkedList.hpp"
+#include "../../include/container/sequenceContainer/linkedList/singlyLinkedList/singlyLinkedList.hpp"
+#include "../../include/container/sequenceContainer/linkedList/doublyLinkedList/doublyLinkedList.hpp"
 
 #include <iostream>
 
