@@ -51,6 +51,9 @@ public:
                 if (new_node->get_data() > new_node->get_parent()->get_data()) { // heap property violated
                     swap(new_node->get_parent(), new_node);
                 }
+                else {
+                    break;
+                }
             }
         }
         size_++;
