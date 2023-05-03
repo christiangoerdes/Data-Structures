@@ -8,7 +8,7 @@ Im Rahmen dieses Projekts werden Interfaces für die sieben Datentypen
 - Queue
 - Stack
 - PriorityQueue
-- Hashende Mengee
+- Hashende Menge
 - Geordnete Menge
 
 entwickelt und alle von Ihnen (außer der geordneten Menge) implementiert.
