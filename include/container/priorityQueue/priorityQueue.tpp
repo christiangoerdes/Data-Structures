@@ -26,40 +26,60 @@ public:
 
     void push(const T& t) override {
         heap.push_back(t);
-        heapify(heap.size()-1);
         size_++;
+        heapify_up(heap.size()-1);
     }
 
-    PQueueNodePtr top() const override {
-        return root;
+    const T& top() const override {
+        if (size_ == 0) {
+            // Exception werfen
+        }
+        else {
+            return heap[0];
+        }
     }
 
-    PQueueNodePtr pop() override {
-
+    void pop() override {
+        if (size_ == 0) {
+            // Exception werfen
+        }
+        else {
+            size_--;
+            heap[0] = heap[size_-1];
+            heap.pop_back();
+        }
+        heapify_down(0);
     }
 
 
 private:
     void heapify_down(int idx) {
-        int current_idx = idx;
-        int max_child_idx = current_idx;
-        if (left_child_idx(current_idx) < size_) {
-            max_child_idx = left_child_idx(current_idx);
-            if (right_child_idx(current_idx) < size_) {
-                if (heap[right_child_idx(current_idx)] < heap[max_child_idx]) {
-                    max_child_idx = right_child_idx(current_idx);
+        int max_child_idx = idx;
+        if (left_child_idx(idx) < size_) {
+            max_child_idx = left_child_idx(idx);
+            if (right_child_idx(idx) < size_) {
+                if (heap[right_child_idx(idx)] < heap[max_child_idx]) {
+                    max_child_idx = right_child_idx(idx);
                 }
             }
         }
-        if (heap[max_child_idx] > heap[current_idx]) {
+        if (heap[max_child_idx] > heap[idx]) {
             T temp = heap[max_child_idx];
-            heap[max_child_idx] = heap[current_idx];
-            heap[current_idx] = temp;
+            heap[max_child_idx] = heap[idx];
+            heap[idx] = temp;
             heapify_down(max_child_idx);
         }
     }
-    void restore_heap_from_bottom() {
-
+    void heapify_up(int idx) {
+        if (idx > 0) {
+            int parent = parent_idx(idx);
+            if (heap[parent] > heap[idx]) {
+                T temp = heap[parent];
+                heap[parent] = heap[idx];
+                heap[idx] = temp;
+                heapify_up(parent);
+            }
+        }
     }
     int left_child_idx(int idx) {
         return 2*idx+1;

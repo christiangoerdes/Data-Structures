@@ -6,7 +6,7 @@
 #include <memory>
 
 template<typename T>
-class AbstractPriorityQueue : public Container{
+class AbstractPriorityQueue : public Container {
     typedef std::shared_ptr<PriorityQueueNode<T>> PQueueNodePtr;
 public:
     /**
@@ -29,12 +29,12 @@ public:
     /**
      * @brief Get element with the highest priority
      */
-    virtual PQueueNodePtr top() const = 0;
+    virtual const T& top() const = 0;
 
     /**
      * @brief Remove element with the highest priority
      */
-    virtual PQueueNodePtr pop() = 0;
+    virtual void pop() = 0;
 };
 
 #include "priorityQueue.tpp"
