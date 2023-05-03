@@ -1,8 +1,7 @@
 #pragma once
 
-#include "priorityQueueNode.hpp"
-#include "../linkedList/singlyLinkedList/singlyLinkedList.hpp"
 #include "../container.hpp"
+#include "priorityQueueIterator.hpp"
 #include <memory>
 
 template<typename T>
@@ -34,7 +33,7 @@ public:
     /**
      * @brief Remove element with the highest priority
      */
-    virtual void pop() = 0;
+    virtual const T& pop() = 0;
 };
 
 #include "priorityQueue.tpp"

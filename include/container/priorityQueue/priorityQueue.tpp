@@ -7,6 +7,7 @@
 
 template<typename T>
 class PriorityQueue : public AbstractPriorityQueue<T> {
+    friend PriorityQueueIterator<T>;
 public:
     PriorityQueue() : size_(0), heap(std::vector<T>()) {
         // nothing to do here
@@ -39,18 +40,19 @@ public:
         }
     }
 
-    void pop() override {
+    const T& pop() override {
         if (size_ == 0) {
             // Exception werfen
         }
         else {
-            heap[0] = heap[size_-1];
+            T save = heap[size_-1];
+            heap[0] = save;
             size_--;
             heap.pop_back();
             heapify_down(0);
+            return save;
         }
     }
-
 
 private:
     void heapify_down(int idx) {
