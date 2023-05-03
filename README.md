@@ -29,4 +29,4 @@ Um einen Build zu erstellen, muss das folgende Command im Wurzelverzeichnis des 
 - Sergej Zuev
 
 
-[](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/2de856c5bbe0d3baf3ab885ebb462fe4d2500ece/docs/Implementation%20Details/impl_details.png)
+[Click here for implementation details](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/2de856c5bbe0d3baf3ab885ebb462fe4d2500ece/docs/Implementation%20Details/impl_details.png)
