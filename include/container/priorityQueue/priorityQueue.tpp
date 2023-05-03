@@ -44,11 +44,11 @@ public:
             // Exception werfen
         }
         else {
-            size_--;
             heap[0] = heap[size_-1];
+            size_--;
             heap.pop_back();
+            heapify_down(0);
         }
-        heapify_down(0);
     }
 
 
@@ -58,7 +58,7 @@ private:
         if (left_child_idx(idx) < size_) {
             max_child_idx = left_child_idx(idx);
             if (right_child_idx(idx) < size_) {
-                if (heap[right_child_idx(idx)] < heap[max_child_idx]) {
+                if (heap[right_child_idx(idx)] > heap[max_child_idx]) {
                     max_child_idx = right_child_idx(idx);
                 }
             }
@@ -73,7 +73,7 @@ private:
     void heapify_up(int idx) {
         if (idx > 0) {
             int parent = parent_idx(idx);
-            if (heap[parent] > heap[idx]) {
+            if (heap[parent] < heap[idx]) {
                 T temp = heap[parent];
                 heap[parent] = heap[idx];
                 heap[idx] = temp;
