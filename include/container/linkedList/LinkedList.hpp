@@ -15,7 +15,7 @@
  * @tparam T The type of the elements stored in the linked list
  */
 template <typename T>
-class AbstractLinkedList : public SequenceContainer {
+class AbstractLinkedList : public Container {
 
 public:
 

@@ -6,7 +6,7 @@
  * This class defines the interface that must be implemented by any derived sequence container
  */
 
-class SequenceContainer {
+class Container {
 
 public:
     /**
