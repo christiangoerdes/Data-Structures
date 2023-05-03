@@ -65,7 +65,7 @@ public:
     }
 
     // removes a specified node from the list
-    void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) override {
+    T remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) override {
         auto predecessor = node->get_prev().lock();
         auto successor = node->get_next();
         if (predecessor) {
@@ -79,11 +79,12 @@ public:
             tail = predecessor;
         }
         size--;
+        return node->get_data();
     }
 
     // removes a specified node from the list
-    void remove (DoublyLinkedListIterator<T> node) override {
-        remove(node.get_pointer());
+    T remove (DoublyLinkedListIterator<T> node) override {
+        return remove(node.get_pointer());
     }
 
     // prints the contents of the list to the console
