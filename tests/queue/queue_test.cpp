@@ -5,6 +5,7 @@
 TEST(QueueTest, InsertionAndRemoval) {
     Queue<std::string> queue;
     ASSERT_EQ(queue.get_size(), 0);
+    ASSERT_EQ(queue.is_empty(), true);
 }
 
 int main(int argc, char **argv) {
