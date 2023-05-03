@@ -1,7 +1,7 @@
 #pragma once
 
 #include "priorityQueueNode.hpp"
-#include "../sequenceContainer/linkedList/singlyLinkedList/singlyLinkedList.hpp"
+#include "../linkedList/singlyLinkedList/singlyLinkedList.hpp"
 #include <memory>
 
 template<typename T>
