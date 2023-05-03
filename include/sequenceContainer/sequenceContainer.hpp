@@ -15,4 +15,9 @@ public:
      */
     virtual size_t get_size() const = 0;
 
+    /**
+     * @brief Returns if the container is empty
+     * @return whether the container is empty
+     */
+    virtual bool is_empty() const = 0;
 };

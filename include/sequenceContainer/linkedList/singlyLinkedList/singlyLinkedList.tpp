@@ -74,6 +74,11 @@ public:
         return head;
     }
 
+    // returns whether the list is empty
+    bool is_empty() const override {
+        return head == nullptr;
+    }
+
 private:
     std::shared_ptr<SinglyLinkedListNode<T>> head; /**< Pointer to the first node in the list */
     size_t size; /**< Number of nodes in the list */

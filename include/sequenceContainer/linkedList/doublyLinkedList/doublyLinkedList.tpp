@@ -82,6 +82,11 @@ public:
         return head;
     }
 
+    // returns whether the list is empty
+    bool is_empty() const override {
+        return head == nullptr;
+    }
+
 private:
     size_t size;
     std::shared_ptr<DoublyLinkedListNode<T>> head;
