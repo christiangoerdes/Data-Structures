@@ -26,3 +26,5 @@ public:
      */
     virtual void push(T& t) const = 0;
 };
+
+#include "queue.tpp"
