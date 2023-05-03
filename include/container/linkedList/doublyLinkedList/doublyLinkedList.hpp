@@ -66,14 +66,14 @@ public:
      *
      * @param node A shared pointer to the node to be removed
      */
-    virtual void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) = 0;
+    virtual T remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) = 0;
 
     /**
      * @brief Remove the given node from the linked list
      *
      * @param node A iterator to the node to be removed
      */
-    virtual void remove(DoublyLinkedListIterator<T> node) = 0;
+    virtual T remove(DoublyLinkedListIterator<T> node) = 0;
 };
 
 #include "doublyLinkedList.tpp"

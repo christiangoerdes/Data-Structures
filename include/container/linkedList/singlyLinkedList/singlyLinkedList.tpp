@@ -43,16 +43,18 @@ public:
     }
 
     // Removes the first node in the list
-    void remove_front() override {
+    T remove_front() override {
         if (!head) {
             throw std::runtime_error("list is empty");
         }
+        auto tmp = head;
         head = head->get_next();
         size--;
+        return tmp->get_data();
     }
 
     // Removes the node after the given predecessor node
-    void remove_after(const std::shared_ptr<SinglyLinkedListNode<T>> &predecessor) override {
+    T remove_after(const std::shared_ptr<SinglyLinkedListNode<T>> &predecessor) override {
         if (!predecessor) {
             throw std::invalid_argument("prev is null");
         }
@@ -62,11 +64,12 @@ public:
         }
         predecessor->set_next(nodeToRemove->get_next());
         size--;
+        return nodeToRemove->get_data();
     }
 
     // Removes the node after the given Iterator
-    void remove_after(SinglyLinkedListIterator<T> predecessor) override {
-        remove_after(predecessor.get_pointer());
+    T remove_after(SinglyLinkedListIterator<T> predecessor) override {
+        return remove_after(predecessor.get_pointer());
     }
 
     // Prints the data in all nodes of the list
