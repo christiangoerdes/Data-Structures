@@ -18,11 +18,16 @@ public:
         }
         T t = list.get_head()->get_data();
         list.remove(list.get_head());
+
+        size--;
+
         return t;
     }
 
     void push(const T& t) override {
         list.insert_back(t);
+
+        size++;
     }
 
     bool is_empty() const override {
