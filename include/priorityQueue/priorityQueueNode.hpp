@@ -4,7 +4,7 @@
 
 template<typename T>
 class PriorityQueueNode {
-    typedef std::shared_ptr<PriorityQueueNode<T>> Nodeptr;
+    typedef std::shared_ptr<PriorityQueueNode<T>> PQueueNodePtr;
 
 public:
 
@@ -12,15 +12,16 @@ public:
      * @brief Constructs a new PriorityQueueNode object
      * @param data The data to be stored in the node
      */
-    PriorityQueueNode(T data) {
+    PriorityQueueNode(T data, PQueueNodePtr parent) {
         data_ = data;
+        parent_ = parent;
     }
 
     /**
      * @brief Sets the left child node
      * @param new_left_child A shared pointer to the new left child node
      */
-    void set_left_child(Nodeptr new_left_child) {
+    void set_left_child(PQueueNodePtr new_left_child) {
         left_child = new_left_child;
     }
 
@@ -28,7 +29,7 @@ public:
      * @brief Sets the right child node
      * @param new_right_child A shared pointer to the new right child node
      */
-    void set_right_child(Nodeptr new_right_child) {
+    void set_right_child(PQueueNodePtr new_right_child) {
         right_child = new_right_child;
     }
 
@@ -36,7 +37,7 @@ public:
      * @brief Returns a reference to the left child node
      * @return A reference to the left child node
      */
-    const Nodeptr get_left_child() const {
+    const PQueueNodePtr get_left_child() const {
         return left_child;
     }
 
@@ -44,7 +45,7 @@ public:
      * @brief Returns a reference to the right child node
      * @return A reference to the right child node
      */
-    const Nodeptr get_right_child() const {
+    const PQueueNodePtr get_right_child() const {
         return right_child;
     }
 
@@ -52,14 +53,14 @@ public:
      * @brief Returns a reference to the parent node
      * @return A reference to the parent node
      */
-    const Nodeptr get_parent() const {
+    const PQueueNodePtr get_parent() const {
         return parent_;
     }
 
     /**
      * @brief Sets a new parent node
      */
-    void set_parent(const Nodeptr new_parent) {
+    void set_parent(const PQueueNodePtr new_parent) {
         parent_ = new_parent;
     }
 
@@ -72,8 +73,10 @@ public:
     }
 
 private:
+    std::string toBinary(int n);
+    void swap(PQueueNodePtr x, PQueueNodePtr y);
     T data_; /**< The data stored in the node */
-    Nodeptr parent_; /**<The parent node */
-    Nodeptr left_child; /**< A shared pointer to the left child of the node */
-    Nodeptr right_child; /**< A shared pointer to the right child of the node */
+    PQueueNodePtr parent_; /**<The parent node */
+    PQueueNodePtr left_child; /**< A shared pointer to the left child of the node */
+    PQueueNodePtr right_child; /**< A shared pointer to the right child of the node */
 };
