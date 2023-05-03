@@ -2,22 +2,24 @@
 
 #include "../container.hpp"
 #include "priorityQueueIterator.hpp"
+#include "priorityQueue.tpp"
 #include <memory>
 
 template<typename T>
 class AbstractPriorityQueue : public Container {
-    typedef std::shared_ptr<PriorityQueueNode<T>> PQueueNodePtr;
 public:
-    /**
-     * @brief Get the size of the queue
-     * @return The number of elements in the queue
-     */
 
     /**
      * @brief Returns an iterator pointing at the element with the highest priority
      * @return An iterator pointing at the max element in the queue
      */
-    // virtual PriorityQueueIterator<T> get_front() const = 0;
+    virtual PriorityQueueIterator<T> get_front() const = 0;
+
+    /**
+     * @brief Returns an iterator pointing at the last element in the priority queue
+     * @return An iterator pointing at the last element in the priority queue
+     */
+    virtual PriorityQueueIterator<T> get_back() const = 0;
 
     /**
      * @brief Insert a new element into the queue

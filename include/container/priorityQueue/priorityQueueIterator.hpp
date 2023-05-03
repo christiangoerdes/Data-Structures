@@ -51,7 +51,7 @@ public:
      * @return
      */
     const T& operator*() const {
-        return queue_.heap[idx_];
+        return queue_->heap[idx_];
     }
 
     /**
@@ -67,10 +67,10 @@ public:
      * @return
      */
     bool operator!=(const PriorityQueueIterator<T>& other) const {
-        return queue_ == other.queue_ | idx_ == other.idx_;
+        return queue_ != other.queue_ | idx_ != other.idx_;
     }
 
 private:
     int idx_;
-    PriorityQueue<T> queue_;
+    std::shared_ptr<PriorityQueue<T>> queue_;
 };
