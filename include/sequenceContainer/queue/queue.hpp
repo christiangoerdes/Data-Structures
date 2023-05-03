@@ -31,7 +31,7 @@ public:
      *
      * @param t Item of type T to insert
      */
-    virtual void push(T& t) = 0;
+    virtual void push(const T& t) = 0;
 };
 
 #include "queue.tpp"

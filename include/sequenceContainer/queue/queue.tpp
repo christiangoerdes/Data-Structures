@@ -12,10 +12,6 @@ public:
         return size;
     }
 
-    void push(T& t) override {
-
-    }
-
     T pop() override {
         if (list.get_size() < 1) {
             return NULL;
@@ -23,6 +19,10 @@ public:
         T t = list.get_head()->get_data();
         list.remove(list.get_head());
         return t;
+    }
+
+    void push(const T& t) override {
+
     }
 
 private:
