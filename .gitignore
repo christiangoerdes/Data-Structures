@@ -2,3 +2,5 @@
 /build/CMakeCache.txt
 /build/CMakeFiles/
 /cmake-build-debug
+
+main.exe
