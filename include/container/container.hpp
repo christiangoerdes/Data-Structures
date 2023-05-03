@@ -1,4 +1,5 @@
 #pragma once
+#include <cstddef>
 
 /**
  * @brief A class representing the abstract base class sequence container

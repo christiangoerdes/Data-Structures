@@ -25,6 +25,10 @@ public:
 
     }
 
+    bool is_empty() const override {
+        return false;
+    }
+
 private:
     size_t size;
     DoublyLinkedList<T> list;

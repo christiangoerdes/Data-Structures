@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "../sequenceContainer.hpp"
+#include "../Container.hpp"
 #include "../linkedList/doublyLinkedList/doublyLinkedList.hpp"
 #include <cstddef>
 
@@ -16,7 +16,7 @@
  *
  */
 template <typename T>
-class AbstractQueue : public SequenceContainer {
+class AbstractQueue : public Container {
 public:
 
     /**
