@@ -38,6 +38,7 @@ public:
      * @param t The data to be stored in the new node
      */
     virtual void insert_after(std::shared_ptr<DoublyLinkedListNode<T>> predecessor, const T& t) = 0;
+    virtual void insert_after(DoublyLinkedListIterator<T> predecessor, const T& t) = 0;
 
     /**
      * @brief Get the iterator to the tail node of the linked list

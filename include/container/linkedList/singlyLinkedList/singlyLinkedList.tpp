@@ -38,6 +38,10 @@ public:
         size++;
     }
 
+    void insert_after(SinglyLinkedListIterator<T> predecessor, const T& t) override {
+        insert_after(predecessor.get_pointer(), t);
+    }
+
     // Removes the first node in the list
     void remove_front() override {
         if (!head) {

@@ -43,7 +43,7 @@ public:
     }
 
     // returns the current pointer
-    SinglyLinkedListNode<T> get_pointer() {
+    std::shared_ptr<SinglyLinkedListNode<T>> get_pointer() {
         return curr;
     }
 

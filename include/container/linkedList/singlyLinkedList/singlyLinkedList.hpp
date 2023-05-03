@@ -30,6 +30,7 @@ public:
      * @param t The data of the new element to be inserted.
      */
     virtual void insert_after(const std::shared_ptr<SinglyLinkedListNode<T>>& predecessor, const T& t) = 0;
+    virtual void insert_after(SinglyLinkedListIterator<T> predecessor, const T& t) = 0;
 
     /**
      * @brief Removes the first element in the list.

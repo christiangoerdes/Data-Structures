@@ -51,6 +51,10 @@ public:
         size++;
     }
 
+    void insert_after(DoublyLinkedListIterator<T> predecessor, const T& t) override {
+        insert_after(predecessor.get_pointer(), t);
+    }
+
     // removes a specified node from the list
     void remove(const std::shared_ptr<DoublyLinkedListNode<T>>& node) override {
         auto predecessor = node->get_prev();

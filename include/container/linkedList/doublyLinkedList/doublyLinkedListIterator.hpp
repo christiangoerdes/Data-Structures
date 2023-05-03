@@ -51,7 +51,7 @@ public:
     }
 
     // returns the current pointer
-    DoublyLinkedListNode<T> get_pointer() {
+    std::shared_ptr<DoublyLinkedListNode<T>> get_pointer() {
         return curr;
     }
 
