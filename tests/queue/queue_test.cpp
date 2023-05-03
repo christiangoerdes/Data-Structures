@@ -3,7 +3,8 @@
 
 // Unit tests for Queue
 TEST(QueueTest, InsertionAndRemoval) {
-
+    Queue<std::string> queue;
+    ASSERT_EQ(queue.get_size(), 0);
 }
 
 int main(int argc, char **argv) {
