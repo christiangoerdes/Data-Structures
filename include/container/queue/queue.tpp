@@ -22,7 +22,7 @@ public:
     }
 
     void push(const T& t) override {
-        list.insert_end(t);
+        list.insert_back(t);
     }
 
     bool is_empty() const override {

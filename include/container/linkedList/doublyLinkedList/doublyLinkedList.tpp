@@ -56,7 +56,7 @@ public:
         insert_after(predecessor.get_pointer(), t);
     }
 
-    void insert_end(const T& t) override {
+    void insert_back(const T& t) override {
         if(size == 0) {
             insert_front(t);
         }else{

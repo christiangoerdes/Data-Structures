@@ -52,7 +52,7 @@ public:
      *
      * @param t The data to be stored in the new node
      */
-    virtual void insert_end(const T& t) = 0;
+    virtual void insert_back(const T& t) = 0;
 
     /**
      * @brief Get the iterator to the tail node of the linked list
