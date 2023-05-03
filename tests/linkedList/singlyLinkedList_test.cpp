@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../include/linkedList/singlyLinkedList/singlyLinkedList.hpp"
+#include "../../include/container/linkedList/singlyLinkedList/singlyLinkedList.hpp"
 
 // Unit tests for SinglyLinkedList
 TEST(SinglyLinkedListTest, InsertionAndRemoval) {
