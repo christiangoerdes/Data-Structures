@@ -22,11 +22,11 @@ public:
     }
 
     void push(const T& t) override {
-
+        list.insert_after_x(list.get_end(), t);
     }
 
     bool is_empty() const override {
-        return false;
+        return list.is_empty();
     }
 
 private:

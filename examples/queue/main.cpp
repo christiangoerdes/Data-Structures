@@ -2,4 +2,7 @@
 
 int main() {
     Queue<int> q;
+
+    q.push(3);
+
 }

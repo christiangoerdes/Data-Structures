@@ -19,7 +19,7 @@ public:
 
     // returns an iterator to the last element in the list
     DoublyLinkedListIterator<T> get_end() const override {
-        return DoublyLinkedListIterator<T>(head);
+        return DoublyLinkedListIterator<T>(tail);
     }
 
     // inserts a new element at the front of the list
