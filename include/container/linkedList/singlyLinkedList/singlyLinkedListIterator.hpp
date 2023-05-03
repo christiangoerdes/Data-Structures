@@ -42,6 +42,11 @@ public:
         return curr != other.curr;
     }
 
+    // returns the current pointer
+    SinglyLinkedListNode<T> get_pointer() {
+        return curr;
+    }
+
 private:
     std::shared_ptr<SinglyLinkedListNode<T>> curr; /**< Pointer to the current node in the list */
 };
