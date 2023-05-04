@@ -86,12 +86,12 @@ enable_testing()
 #-------------Erzeuge Testprogramme------------#
 #----------------------------------------------#
 
-# Declare test program singlyLinkedList_text
+# Declare test program singlyLinkedList_test
 add_executable(singlyLinkedList_test tests/linkedList/singlyLinkedList_test.cpp)
 target_link_libraries(singlyLinkedList_test GTest::gtest_main)
 gtest_discover_tests(singlyLinkedList_test)
 
-# Declare test program doublyLinkedList_text
+# Declare test program doublyLinkedList_test
 add_executable(doublyLinkedList_test tests/linkedList/doublyLinkedList_test.cpp)
 target_link_libraries(doublyLinkedList_test GTest::gtest_main)
 gtest_discover_tests(doublyLinkedList_test)
@@ -114,3 +114,8 @@ gtest_discover_tests(demo_3_test)
 add_executable(queue_test tests/queue/queue_test.cpp)
 target_link_libraries(queue_test GTest::gtest_main)
 gtest_discover_tests(queue_test)
+
+# Declare test program priorityQueue_test
+add_executable(priorityQueue_test tests/priorityQueue/priorityQueue_test.cpp)
+target_link_libraries(priorityQueue_test GTest::gtest_main)
+gtest_discover_tests(priorityQueue_test)
