@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "../../include/container/linkedList/doublyLinkedList/doublyLinkedList.hpp"
-#include "../../include/container/priorityQueue/abstractPriorityQueue.hpp"
+#include "../../include/container/priorityQueue/priorityQueue.hpp"
 
 TEST(PriorityQueueTest, InsertionAndRemoval) {
 PriorityQueue<int> queue;
