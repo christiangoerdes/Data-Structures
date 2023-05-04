@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Container.hpp"
+#include <stdexcept>
 
 /**
  * @brief Abstract base class for PriorityQueue

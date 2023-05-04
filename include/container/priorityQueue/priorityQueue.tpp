@@ -28,7 +28,7 @@ public:
 
     const T& top() const override {
         if (size_ == 0) {
-            // Exception werfen
+            throw std::out_of_range( "Tried to access empty PriorityQueue." );
         }
         else {
             return heap[0];
@@ -37,7 +37,9 @@ public:
 
     const T& pop() override {
         if (size_ == 0) {
-            // Exception werfen
+            if (size_ == 0) {
+                throw std::out_of_range( "Tried to access empty PriorityQueuee" );
+            }
         }
         else {
             T save = heap[size_-1];
