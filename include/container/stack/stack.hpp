@@ -8,6 +8,7 @@
 #include "../Container.hpp"
 #include "../linkedList/doublyLinkedList/doublyLinkedList.hpp"
 #include <cstddef>
+#include <stdexcept>
 
 /**
  * @brief Abstract base class for Stack
