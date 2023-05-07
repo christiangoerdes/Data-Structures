@@ -17,7 +17,7 @@ void testStack(int numItems) {
     }
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> myStackTime = end - start;
-    std::cout << "MyStack time for " << numItems << " items: " << myStackTime.count() << " seconds" << std::endl;
+    std::cout << "MyStack time for\t" << numItems << " items:\t" << myStackTime.count() << " seconds" << std::endl;
 
     // Test C++ standard stack
     std::stack<int> stdStack;
@@ -30,11 +30,15 @@ void testStack(int numItems) {
     }
     end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> stdStackTime = end - start;
-    std::cout << "std::stack time for " << numItems << " items: " << stdStackTime.count() << " seconds" << std::endl;
+    std::cout << "std::stack time for\t" << numItems << " items:\t" << stdStackTime.count() << " seconds" << std::endl;
+
+    std::cout << std::endl;
 }
 
 int main () {
 
+    testStack(10000);
+    testStack(100000);
     testStack(1000000);
 
 }
