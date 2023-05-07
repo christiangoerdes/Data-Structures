@@ -18,11 +18,13 @@ public:
         }
         T t = list.get_head()->get_data(); // Get data of the head node
         list.remove(list.get_head()); // Remove the head node from the list
+        size--;
         return t; // Return the data of the head node
     }
 
     void push(const T& t) override { // Implementation of push() function of abstract class
         list.insert_front(t); // Insert the new element at the front of the list
+        size++;
     }
 
     bool is_empty() const override { // Implementation of is_empty() function of abstract class
