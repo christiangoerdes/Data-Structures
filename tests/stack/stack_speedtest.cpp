@@ -40,5 +40,6 @@ int main () {
     testStack(10000);
     testStack(100000);
     testStack(1000000);
+    testStack(10000000);
 
 }
