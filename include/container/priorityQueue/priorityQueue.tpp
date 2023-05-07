@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <functional>
 #include "priorityQueue.hpp"
 
 template<typename T>
@@ -9,6 +10,10 @@ class PriorityQueue : public AbstractPriorityQueue<T> {
 public:
 
     PriorityQueue() : size_(0), heap(std::vector<T>()) {
+        cmp_ = [] (const T& a, const T& b) -> bool {return a < b;};
+    }
+
+    PriorityQueue(std::function<bool(const T&, const T&)> cmp) : size_(0), heap(std::vector<T>()), cmp_(cmp) {
         // nothing to do here
     }
 
@@ -38,7 +43,7 @@ public:
     const T& pop() override {
         if (size_ == 0) {
             if (size_ == 0) {
-                throw std::out_of_range( "Tried to access empty PriorityQueuee" );
+                throw std::out_of_range( "Tried to access empty PriorityQueue" );
             }
         }
         else {
@@ -120,4 +125,5 @@ private:
 
     size_t size_;
     std::vector<T> heap;
+    std::function<bool(const T&, const T&)> cmp_;
 };
