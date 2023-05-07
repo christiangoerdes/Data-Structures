@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <queue>
+#include <math.h>
 #include "../../include/container/priorityQueue/priorityQueue.hpp"
 
 // Function to test the priorityQueue implementation
@@ -16,7 +17,7 @@ void testPriorityQueue(int numItems) {
     }
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> myStackTime = end - start;
-    std::cout << "PriorityQueue time for " << numItems << " items: " << myStackTime.count() << " seconds" << std::endl;
+    std::cout << "PriorityQueue time for\t\t " << numItems << " items:\t\t " << myStackTime.count() << " seconds" << std::endl;
 
     // Test C++ standard priorityQueue
     std::priority_queue<int> stdPriorityQueue;
@@ -29,9 +30,11 @@ void testPriorityQueue(int numItems) {
     }
     end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> stdStackTime = end - start;
-    std::cout << "std::priority_queue time for " << numItems << " items: " << stdStackTime.count() << " seconds" << std::endl;
+    std::cout << "std::priority_queue time for\t " << numItems << " items:\t\t " << stdStackTime.count() << " seconds" << std::endl;
 }
 
 int main () {
-    testPriorityQueue(10000000);
+    for (int i = 0; i < 8; i++) {
+        testPriorityQueue(pow(10,i));
+    }
 }
