@@ -18,7 +18,7 @@ Dabei orientieren wir uns an den in dem Modul "Algorithmen und Programmierung" b
 Der Fokus des Projekts liegt insbesondere auf der effektiven Organisation der verteilten Zusammenarbeit und einer ausgiebigen, nachvollziehbaren Dokumentation.
 
 ## Projektdetails
-[Implementationsdetails](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/2de856c5bbe0d3baf3ab885ebb462fe4d2500ece/docs/Implementation%20Details/impl_details.png)
+[Implementationsdetails](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/dc10a4d938a1d92805cf42d531cc048fdc8cf5c7/docs/Implementation%20Details/implementatio_details.drawio.png)
 
 [User Interface](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/722759bca2ea38016fb85ba3f9bc30dbe04862a2/docs/User%20Interface/ui.png)
 
