@@ -3,13 +3,13 @@
 ## Allgemeine Informationen
 
 Im Rahmen dieses Projekts werden Interfaces für die sieben Datentypen
-- SinglyLinkedList
-- DoublyLinkedList
-- Queue
-- Stack
-- PriorityQueue
-- Hashende Menge
+- SinglyLinkedList (Christian Goerdes)
+- DoublyLinkedList (Christian Goerdes)
+- Queue (Ibrahim Fakhir)
+- Stack (Ibrahim Fakhir)
+- PriorityQueue (Sergej Zuev)
 - Geordnete Menge
+- Hashende Menge (Ibrahim Fakhir)
 
 entwickelt und alle von Ihnen (außer der geordneten Menge) implementiert.
 
