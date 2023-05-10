@@ -20,7 +20,7 @@ Der Fokus des Projekts liegt insbesondere auf der effektiven Organisation der ve
 ## Projektdetails
 [Implementationsdetails](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/dc10a4d938a1d92805cf42d531cc048fdc8cf5c7/docs/Implementation%20Details/implementatio_details.drawio.png)
 
-[User Interface](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/722759bca2ea38016fb85ba3f9bc30dbe04862a2/docs/User%20Interface/ui.png)
+[User Interface](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/fadc259fa5dc5e9e2baf83a00b2dc5ac7925df49/docs/User%20Interface/user_interface.drawio.png)
 
 ## Build erstellen
 Um einen Build zu erstellen, muss das folgende Command im Wurzelverzeichnis des Projekts eingegeben werden:
