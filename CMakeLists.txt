@@ -96,21 +96,6 @@ add_executable(doublyLinkedList_test tests/linkedList/doublyLinkedList_test.cpp)
 target_link_libraries(doublyLinkedList_test GTest::gtest_main)
 gtest_discover_tests(doublyLinkedList_test)
 
-# Declare test program demo_1_test
-add_executable(demo_1_test tests/demo_1_test.cpp ${SRC_FILES})
-target_link_libraries(demo_1_test GTest::gtest_main)
-gtest_discover_tests(demo_1_test)
-
-# Declare test program demo_2_test
-add_executable(demo_2_test tests/demo_2_test.cpp ${SRC_FILES})
-target_link_libraries(demo_2_test GTest::gtest_main)
-gtest_discover_tests(demo_2_test)
-
-# Declare test program demo_3_test
-add_executable(demo_3_test tests/demo_3_test.cpp ${SRC_FILES})
-target_link_libraries(demo_3_test GTest::gtest_main)
-gtest_discover_tests(demo_3_test)
-
 add_executable(queue_test tests/queue/queue_test.cpp)
 target_link_libraries(queue_test GTest::gtest_main)
 gtest_discover_tests(queue_test)
