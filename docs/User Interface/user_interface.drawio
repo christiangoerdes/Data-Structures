@@ -1,13 +1,13 @@
-<mxfile host="app.diagrams.net" modified="2023-05-03T21:22:28.517Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="2GXIs0IRUsq5orjAb-Me" version="21.2.7" type="device">
+<mxfile host="app.diagrams.net" modified="2023-05-10T20:29:09.107Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="zMw4HhIaTCGtEpiCndwF" version="21.2.9" type="device">
   <diagram name="Seite-1" id="T3qOwCYRP5SabC_Y7l2l">
-    <mxGraphModel dx="1395" dy="672" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1189" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-24" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="560" y="160" width="290" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="LrtDx9Zr3HTaaep1rT7l-21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;DoublyLinkedList&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp;+ get_size()&amp;nbsp;&lt;br&gt;&amp;nbsp;+ get_front() : Iterator&lt;br&gt;&amp;nbsp;+ get_end() : Iterator&lt;br&gt;&amp;nbsp;+ insert_front(T)&lt;br&gt;&lt;div&gt;&amp;nbsp;+ insert_after(predecessor, T)&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ remove(T)&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-24" vertex="1">
+        <mxCell id="LrtDx9Zr3HTaaep1rT7l-21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;DoublyLinkedList&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp;+ get_size()&amp;nbsp;&lt;br&gt;&amp;nbsp;+ is_empty()&lt;br&gt;&amp;nbsp;+ get_front() : Iterator&lt;br&gt;&amp;nbsp;+ get_end() : Iterator&lt;br&gt;&amp;nbsp;+ insert_front(T)&lt;br&gt;&lt;div&gt;&amp;nbsp;+ insert_after(predecessor, T)&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ remove(T)&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-24" vertex="1">
           <mxGeometry y="12.183978068839481" width="280" height="147.81602193116058" as="geometry" />
         </mxCell>
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-23" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-24" vertex="1">
@@ -16,7 +16,7 @@
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-30" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="240" y="350" width="290" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="LrtDx9Zr3HTaaep1rT7l-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Queue&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ push(T)&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ pop()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-30" vertex="1">
+        <mxCell id="LrtDx9Zr3HTaaep1rT7l-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Queue&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ get_size()&lt;/p&gt;&amp;nbsp;+ is_empty()&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ push(T)&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ pop()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-30" vertex="1">
           <mxGeometry y="10" width="280" height="120" as="geometry" />
         </mxCell>
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-3" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-30" vertex="1">
@@ -25,7 +25,7 @@
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-31" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="240" y="160" width="290" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="LrtDx9Zr3HTaaep1rT7l-18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;SinglyLinkedList&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp;+ get_size&amp;nbsp;&lt;br&gt;&amp;nbsp;+ get_front() : Iterator&lt;br&gt;&amp;nbsp;+ inset_front(T)&lt;br&gt;&amp;nbsp;+ insert_after(predecessor, T)&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ remove_front()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ remove_after(predecessor)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;container=0;" parent="LrtDx9Zr3HTaaep1rT7l-31" vertex="1">
+        <mxCell id="LrtDx9Zr3HTaaep1rT7l-18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;SinglyLinkedList&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp;+ get_size&lt;br&gt;&amp;nbsp;+ is_empty()&amp;nbsp;&lt;br&gt;&amp;nbsp;+ get_front() : Iterator&lt;br&gt;&amp;nbsp;+ inset_front(T)&lt;br&gt;&amp;nbsp;+ insert_after(predecessor, T)&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ remove_front()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ remove_after(predecessor)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;container=0;" parent="LrtDx9Zr3HTaaep1rT7l-31" vertex="1">
           <mxGeometry y="13.11999999999996" width="280" height="146.88" as="geometry" />
         </mxCell>
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-26" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;container=0;" parent="LrtDx9Zr3HTaaep1rT7l-31" vertex="1">
@@ -34,7 +34,7 @@
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-32" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="240" y="670" width="290" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="LrtDx9Zr3HTaaep1rT7l-11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;PriorityQueue&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ get_top() : Iterator&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ push(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ pop()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-32" vertex="1">
+        <mxCell id="LrtDx9Zr3HTaaep1rT7l-11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;PriorityQueue&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ get_size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ is_empty()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ top() : Iterator&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ push(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ pop()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-32" vertex="1">
           <mxGeometry y="10" width="280" height="120" as="geometry" />
         </mxCell>
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-12" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-32" vertex="1">
@@ -43,29 +43,29 @@
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-33" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="560" y="350" width="290" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="LrtDx9Zr3HTaaep1rT7l-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Stack&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ push(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ pop()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-33" vertex="1">
+        <mxCell id="LrtDx9Zr3HTaaep1rT7l-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Stack&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ get_size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ is_empty()&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ push(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ pop()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-33" vertex="1">
           <mxGeometry y="10" width="280" height="120" as="geometry" />
         </mxCell>
         <mxCell id="LrtDx9Zr3HTaaep1rT7l-9" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;" parent="LrtDx9Zr3HTaaep1rT7l-33" vertex="1">
           <mxGeometry x="260" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="3Ro4mRhuLF2zyKNi235O-1" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="560" y="510" width="290" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="3Ro4mRhuLF2zyKNi235O-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Hashset&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ get_size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ insert(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ contains(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ remove(T)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="3Ro4mRhuLF2zyKNi235O-1">
-          <mxGeometry y="10" width="280" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="3Ro4mRhuLF2zyKNi235O-3" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;" vertex="1" parent="3Ro4mRhuLF2zyKNi235O-1">
-          <mxGeometry x="260" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="3Ro4mRhuLF2zyKNi235O-4" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="3Ro4mRhuLF2zyKNi235O-1" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="240" y="510" width="290" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="3Ro4mRhuLF2zyKNi235O-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;OrderedSet&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ get_first() : Iterator&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ insert(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ contains(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ remove(T)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="3Ro4mRhuLF2zyKNi235O-4">
+        <mxCell id="3Ro4mRhuLF2zyKNi235O-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;UnorderedSet&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ get_size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ is_empty()&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ insert(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ contains(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ remove(T)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="3Ro4mRhuLF2zyKNi235O-1" vertex="1">
           <mxGeometry y="10" width="280" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="3Ro4mRhuLF2zyKNi235O-6" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;" vertex="1" parent="3Ro4mRhuLF2zyKNi235O-4">
+        <mxCell id="3Ro4mRhuLF2zyKNi235O-3" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;" parent="3Ro4mRhuLF2zyKNi235O-1" vertex="1">
           <mxGeometry x="260" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3Ro4mRhuLF2zyKNi235O-4" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="560" y="510" width="290" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="3Ro4mRhuLF2zyKNi235O-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;OrderedSet&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ get_size()&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ is_empty()&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ get_first() : Iterator&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ insert(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ contains(T)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ remove(T)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="3Ro4mRhuLF2zyKNi235O-4" vertex="1">
+          <mxGeometry y="11.538461538461537" width="280" height="138.46153846153845" as="geometry" />
+        </mxCell>
+        <mxCell id="3Ro4mRhuLF2zyKNi235O-6" value="T" style="fontStyle=0;dashed=1;html=1;whiteSpace=wrap;" parent="3Ro4mRhuLF2zyKNi235O-4" vertex="1">
+          <mxGeometry x="260" width="30" height="34.61538461538461" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
