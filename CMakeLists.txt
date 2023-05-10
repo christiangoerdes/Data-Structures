@@ -53,6 +53,11 @@ add_executable(stackMain
         examples/stack/main.cpp
         )
 
+# Baue das Programm `unorderedStackMain' aus den Quellen
+# examples/unorderedSet
+add_executable(unorderedSetMain
+        examples/unorderedSet/main.cpp
+        )
 
 #----------------------------------------------#
 #----------Download and use GoogleTest---------#
