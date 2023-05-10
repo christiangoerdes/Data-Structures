@@ -21,7 +21,7 @@ class AbstractUnorderedSet : public Container {
      *
      * @param t Element to be inserted
      */
-    virtual void insert(T& t) = 0;
+    virtual void insert(const T& value) = 0;
 
     /**
      * @brief Checks whether the set contains a specific element
@@ -29,14 +29,14 @@ class AbstractUnorderedSet : public Container {
      * @param t Element to be looked for
      * @return True iff the set contains the element in question
      */
-    virtual bool contains(T& t) const = 0;
+    virtual bool contains(const T& value) const = 0;
 
     /**
      * @brief Removes an element from the set
      *
      * @param t Element to be removed
      */
-    virtual void remove(T& t) = 0;
+    virtual void remove(const T& value) = 0;
 
 };
 
