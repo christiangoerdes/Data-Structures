@@ -14,7 +14,7 @@ public:
     }
 
     PriorityQueue(std::function<bool(const T&, const T&)> cmp) : size_(0), heap(std::vector<T>()), cmp_(cmp) {
-        // nothing to do here
+        // alternativer Konstruktor mit Weitterreichung einer Compare-Funktion
     }
 
     size_t get_size() const override {
@@ -67,12 +67,13 @@ private:
         if (left_child_idx(idx) < size_) {
             max_child_idx = left_child_idx(idx);
             if (right_child_idx(idx) < size_) {
-                if (heap[right_child_idx(idx)] > heap[max_child_idx]) {
+
+                if (cmp_(heap[max_child_idx], heap[right_child_idx(idx)])) {
                     max_child_idx = right_child_idx(idx);
                 }
             }
         }
-        if (heap[max_child_idx] > heap[idx]) {
+        if (cmp_(heap[idx], heap[max_child_idx])) {
             T temp = heap[max_child_idx];
             heap[max_child_idx] = heap[idx];
             heap[idx] = temp;
@@ -87,7 +88,7 @@ private:
     void heapify_up(int idx) {
         if (idx > 0) {
             int parent = parent_idx(idx);
-            if (heap[parent] < heap[idx]) {
+            if (cmp_(heap[parent], heap[idx])) {
                 T temp = heap[parent];
                 heap[parent] = heap[idx];
                 heap[idx] = temp;
