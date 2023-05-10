@@ -34,7 +34,7 @@ void testPriorityQueue(int numItems) {
 }
 
 int main () {
-    for (int i = 0; i < 8; i++) {
-        testPriorityQueue(pow(10,i));
+    for (int i = 0; i < 30; i++) {
+        testPriorityQueue(pow(2,i));
     }
 }

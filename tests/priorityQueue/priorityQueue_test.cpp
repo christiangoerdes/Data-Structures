@@ -28,6 +28,33 @@ ASSERT_EQ(queue.top(), 2);
 queue.pop();
 ASSERT_EQ(queue.top(), 1);
 
+// Testing custom compare-functions
+PriorityQueue<int> special_queue([] (const int& a, const int& b) {return a > b;}); // PriorityQueue with reversed order
+
+// Empty initialization
+    ASSERT_EQ(special_queue.get_size(), 0);
+
+// Insert an element
+    special_queue.push(1);
+    ASSERT_EQ(special_queue.get_size(), 1);
+    ASSERT_EQ(special_queue.top(), 1);
+
+// Insert elements of higher priority
+    special_queue.push(2);
+    special_queue.push(3);
+    ASSERT_EQ(special_queue.get_size(), 3);
+    ASSERT_EQ(special_queue.top(), 1);
+
+// Insert an element of lower priority
+    special_queue.push(0);
+    ASSERT_EQ(special_queue.top(), 0);
+
+// Remove elements with highest priority
+    special_queue.pop();
+    ASSERT_EQ(special_queue.top(), 1);
+    special_queue.pop();
+    ASSERT_EQ(special_queue.top(), 2);
+
 }
 
 int main(int argc, char **argv) {
