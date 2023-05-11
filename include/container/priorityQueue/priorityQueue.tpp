@@ -40,15 +40,13 @@ public:
         }
     }
 
-    const T& pop() override {
+    const T pop() override {
         if (size_ == 0) {
-            if (size_ == 0) {
-                throw std::out_of_range( "Tried to access empty PriorityQueue" );
-            }
+            throw std::out_of_range( "Tried to access empty PriorityQueue" );
         }
         else {
-            T save = heap[size_-1];
-            heap[0] = save;
+            T save = heap[0];
+            heap[0] = heap[size_-1];;
             size_--;
             heap.pop_back();
             heapify_down(0);

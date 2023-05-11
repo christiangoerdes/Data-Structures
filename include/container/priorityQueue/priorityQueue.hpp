@@ -26,7 +26,7 @@ public:
     /**
      * @brief Remove element with the highest priority
      */
-    virtual const T& pop() = 0;
+    virtual const T pop() = 0;
 };
 
 #include "priorityQueue.tpp"
