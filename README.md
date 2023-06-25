@@ -1,4 +1,4 @@
-# ProjektAlpha
+# ProjektAlpha - Uni Projekt 1
 
 ## Allgemeine Informationen
 
