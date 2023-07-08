@@ -20,7 +20,7 @@ Der Fokus des Projekts liegt insbesondere auf der effektiven Organisation der ve
 ## Projektdetails
 [Implementationsdetails](https://github.com/christiangoerdes/Data-Structures/blob/455109cf6dd59d07719a35a3ad0e17d084f88075/docs/Implementation%20Details/implementatio_details.drawio.png)
 
-[User Interface](https://gitlab.informatik.uni-bonn.de/xx_best_oose_group_xx/projektalpha/-/blob/975b5fd697bb38c59834822729821c3d9948a18d/docs/User%20Interface/user_interface.drawio.png)
+[User Interface](https://github.com/christiangoerdes/Data-Structures/blob/b1d916716e8342b963026b8c89f9d544b348987e/docs/User%20Interface/user_interface.drawio.png)
 
 ## Build erstellen
 Um einen Build zu erstellen, muss das folgende Command im Wurzelverzeichnis des Projekts eingegeben werden:
