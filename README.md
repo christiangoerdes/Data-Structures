@@ -1,33 +1,29 @@
-# ProjektAlpha - Uni Projekt 1
+# Data Structures 
 
-## Allgemeine Informationen
+## General Information
+This project has been developed as a team effort within the scope of the Object-Oriented Software Development module. 
+It is aligned with the concepts covered in the Algorithms and Data Structures module.
 
-Im Rahmen dieses Projekts werden Interfaces für die sieben Datentypen
-- SinglyLinkedList (Christian Goerdes)
-- DoublyLinkedList (Christian Goerdes)
-- Queue (Ibrahim Fakhir)
-- Stack (Ibrahim Fakhir)
-- PriorityQueue (Sergej Zuev)
-- Geordnete Menge
-- Hashende Menge (Ibrahim Fakhir)
+In the context of this project, interfaces have been created for seven data types:
 
-entwickelt und alle von Ihnen (außer der geordneten Menge) implementiert.
+- Singly Linked List
+- Doubly Linked List
+- Queue
+- Stack
+- Priority Queue
+- Ordered Set
+- Hashed Set
 
-Dabei orientieren wir uns an den in dem Modul "Algorithmen und Programmierung" besprochenen Laufzeitvorgaben.
+All of these data types will be implemented, except for the ordered set. The project aims to meet the runtime requirements discussed in the "Algorithms and Data Structures" module and emphasizes effective organization of distributed collaboration along with comprehensive, well-documented solutions.
 
-Der Fokus des Projekts liegt insbesondere auf der effektiven Organisation der verteilten Zusammenarbeit und einer ausgiebigen, nachvollziehbaren Dokumentation.
-
-## Projektdetails
+## Projekt Details
 [Implementationsdetails](https://github.com/christiangoerdes/Data-Structures/blob/455109cf6dd59d07719a35a3ad0e17d084f88075/docs/Implementation%20Details/implementatio_details.drawio.png)
 
 [User Interface](https://github.com/christiangoerdes/Data-Structures/blob/b1d916716e8342b963026b8c89f9d544b348987e/docs/User%20Interface/user_interface.drawio.png)
 
-## Build erstellen
-Um einen Build zu erstellen, muss das folgende Command im Wurzelverzeichnis des Projekts eingegeben werden:
+## Building the Project
+To build the project, use the following command in the root directory:
     
     cmake -S . -B build && cmake --build build
 
-## Mitglieder
-- Ibrahim Fakhir
-- Christian Gördes
-- Sergej Zuev
+The executables are located in the `/build` directory. 
